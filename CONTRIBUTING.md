@@ -1,7 +1,7 @@
 # Contributing
 
-Weave Gitops is a [Apache-2.0](LICENSE) project. This is an open source product with a community
-led by volunteers interested in the brilliant software originally created by Weaveworks. :heart:
+Flux GUI is a [Apache-2.0](LICENSE) project forked from Weave GitOps. This is an open source product with a community
+led by volunteers interested in the solution originally created by Weaveworks.
 
 We welcome improvements to reporting issues and documentation as well as to code.
 

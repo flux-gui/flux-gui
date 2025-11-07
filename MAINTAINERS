@@ -1,4 +1,12 @@
-The maintainers work across a series of projects at Weaveworks, for convenience they are in a github team
-@weaveworks/weavegitops-core-maintainers
+Flux GUI is maintained by a community of volunteers. This file should list the people and teams that currently act as maintainers for this repository.
 
-For help or discussion we're available in Slack at [#weave-gitops channel](https://app.slack.com/client/T2NDH1D9D/C0248LVC719/thread/C2ND76PAA-1621532937.019800) on Weaveworks Community Slack. [Invite yourself if you haven't joined yet.](https://slack.weave.works/) 
+Current Maintainers:
+
+- @yflux-gui/flux-gui-maintainer
+
+If you are taking on a maintainer role, please open an issue or pull request to update this file so the community knows who to contact.
+
+Communication channels
+
+- Primary: GitHub Issues & Discussions in this repository
+- PRs: Please open pull requests for any code changes
