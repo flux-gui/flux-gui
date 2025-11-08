@@ -1,4 +1,10 @@
-# Weave GitOps
+[![This repository is a fork](https://img.shields.io/badge/forked%20from-Weave%20GitOps-orange.svg)](#)
+
+# Flux GUI (fork of Weave GitOps)
+
+> NOTE: This repository is a community-driven fork of the original Weave GitOps project.
+> We're transitioning the project to be maintained independently under the "Flux GUI" name.
+> See `COMMUNITY.md` for governance, contribution guidelines, and communication channels.
 
 ![Test status](https://github.com/weaveworks/weave-gitops/actions/workflows/pr.yaml/badge.svg)
 [![LICENSE](https://img.shields.io/github/license/weaveworks/weave-gitops)](https://github.com/weaveworks/weave-gitops/blob/master/LICENSE)
@@ -135,17 +141,14 @@ Please see our Weave GitOps OSS [FAQ](https://www.weaveworks.org/faqs-for-weave-
 
 ## Contribution
 
-Need help or want to contribute? Please see the links below.
+Need help or want to contribute? Please see the links below and see `COMMUNITY.md` for community, governance and communication details.
 
-- Getting Started?
-    - Follow our [Get Started guide](https://docs.gitops.weaveworks.org/docs/next/open-source/getting-started/install-OSS/) and give us feedback
+- Getting started
+  - The original project docs can be a useful reference: https://docs.gitops.weaveworks.org/. Some guidance may differ for this fork — check `COMMUNITY.md`.
 - Need help?
-    - Talk to us in
-      the [#weave-gitops channel](https://app.slack.com/client/T2NDH1D9D/C0248LVC719/thread/C2ND76PAA-1621532937.019800)
-      on Weaveworks Community Slack. [Invite yourself if you haven't joined yet.](https://slack.weave.works/)
+  - Open an issue or use GitHub Discussions in this repository: https://github.com/flux-gui/flux-gui/issues
 - Have feature proposals or want to contribute?
-    - Please create a [Github issue](https://github.com/weaveworks/weave-gitops/issues)
-    - Learn more about contributing [here](./CONTRIBUTING.md).
+  - Please create an issue to discuss larger changes, then open a pull request. Learn more about contributing in `CONTRIBUTING.md`.
 
 [//]: # (## License scan details)
 
