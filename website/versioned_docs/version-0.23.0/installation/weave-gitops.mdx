@@ -1,14 +1,14 @@
 ---
-title: Weave GitOps OSS
+title: Flux-GUI OSS
 hide_title: true
 pagination_next: getting-started/ui
 ---
 
-## Installing Weave GitOps on your Cluster
+## Installing Flux-GUI on your Cluster
 
 :::tip
-These are the instructions to install the OSS tier Weave GitOps. To install Enterprise
-Weave GitOps, follow the instructions [here][ee-install].
+These are the instructions to install the OSS tier Flux-GUI. To install Enterprise
+Flux-GUI, follow the instructions [here][ee-install].
 :::
 
 ### Before you begin
@@ -20,11 +20,11 @@ To follow along, you will need the following:
 
 ### Install Flux
 
-Weave GitOps is an extension to Flux and therefore requires that Flux 0.32 or
+Flux-GUI is an extension to Flux and therefore requires that Flux 0.32 or
 later has already been installed on your Kubernetes cluster. Full documentation
 is available [here][fl-install].
 
-This version of Weave GitOps is tested against the following Flux releases:
+This version of Flux-GUI is tested against the following Flux releases:
 * 0.36
 * 0.35
 * 0.34
@@ -90,12 +90,12 @@ Let's get into it... :sparkles:
 
 ### Install the `gitops` CLI
 
-Weave GitOps includes a command-line interface to help users create and manage resources.
+Flux-GUI includes a command-line interface to help users create and manage resources.
 
 :::note Installation options
 The `gitops` CLI is currently supported on Mac (x86 and Arm), and Linux - including Windows Subsystem for Linux (WSL).
 
-Windows support is a [planned enhancement](https://github.com/weaveworks/weave-gitops/issues/663).
+Windows support is a [planned enhancement](https://github.com/flux-gui/flux-gui/issues/663).
 :::
 
 There are multiple ways to install the `gitops` CLI:
@@ -107,7 +107,7 @@ import TabItem from "@theme/TabItem";
 <TabItem value="curl" label="curl">
 
 ```bash
-curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/download/v0.23.0/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
+curl --silent --location "https://github.com/flux-gui/flux-gui/releases/download/v0.23.0/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
 sudo mv /tmp/gitops /usr/local/bin
 gitops version
 ```
@@ -123,7 +123,7 @@ brew install weaveworks/tap/gitops
 </TabItem>
 </Tabs>
 
-### Deploy Weave GitOps
+### Deploy Flux-GUI
 
 In this section we will do the following:
 
@@ -140,7 +140,7 @@ In this section we will do the following:
    cd fleet-infra
    ```
 
-1. Run the following command which will create a `HelmRepository` and `HelmRelease` to deploy Weave GitOps
+1. Run the following command which will create a `HelmRepository` and `HelmRelease` to deploy Flux-GUI
 
    ```
    PASSWORD="<your password>"
@@ -160,11 +160,11 @@ In this section we will do the following:
 1. Commit and push the `weave-gitops-dashboard.yaml` to the `fleet-infra` repository
 
    ```
-   git add -A && git commit -m "Add Weave GitOps Dashboard"
+   git add -A && git commit -m "Add Flux-GUI Dashboard"
    git push
    ```
 
-1. Validate that Weave GitOps and Flux are installed. _Note: this wont be instantaneous,
+1. Validate that Flux-GUI and Flux are installed. _Note: this wont be instantaneous,
 	give the Flux controllers a couple of minutes to pull the latest commit._
 
    ```
@@ -183,7 +183,7 @@ In this section we will do the following:
    ```
 
 	:::tip
-	There are many other things you can configure in the Weave GitOps Helm Chart.
+	There are many other things you can configure in the Flux-GUI Helm Chart.
 	The full Chart reference can be found [here](../references/helm-reference.md).
 	:::
 

@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/services/crd"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/services/crd"
 )
 
 // ApplicationsOptions includes all the options that can be set for an

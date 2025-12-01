@@ -12,7 +12,7 @@ import (
 
 	"github.com/go-logr/logr"
 
-	"github.com/weaveworks/weave-gitops/core/logger"
+	"github.com/flux-gui/flux-gui/core/logger"
 )
 
 func envSlice(environ map[string]string) []string {

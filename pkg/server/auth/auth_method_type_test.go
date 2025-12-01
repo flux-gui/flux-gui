@@ -6,7 +6,7 @@ import (
 
 	"github.com/onsi/gomega"
 
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 func TestInvariant(t *testing.T) {

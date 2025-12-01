@@ -12,8 +12,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	ctrlclient "sigs.k8s.io/controller-runtime/pkg/client/fake"
 
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 func TestInitAuthServer(t *testing.T) {

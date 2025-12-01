@@ -18,9 +18,9 @@ import (
 
 	pacv2beta2 "github.com/weaveworks/policy-agent/api/v2beta2"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 const (
@@ -59,7 +59,7 @@ func getPolicyParamValue(param pacv2beta2.PolicyParameters, policyID string) (*a
 		anyValue, err = anypb.New(value)
 	case "boolean":
 		// fixes CWE-190 CWE-681
-		// https://github.com/weaveworks/weave-gitops/security/code-scanning/3886
+		// https://github.com/flux-gui/flux-gui/security/code-scanning/3886
 		boolValue, convErr := strconv.ParseBool(string(param.Value.Raw))
 		if convErr != nil {
 			err = convErr

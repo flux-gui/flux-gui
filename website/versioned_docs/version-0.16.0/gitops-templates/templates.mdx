@@ -6,7 +6,7 @@ hide_title: true
 import TierLabel from "../_components/TierLabel";
 
 # Why GitOps templates <TierLabel tiers="enterprise" />
-GitOpsTemplates enables Application Developers to self-service components and services using Weave GitOps. 
+GitOpsTemplates enables Application Developers to self-service components and services using Flux-GUI. 
 Turning knowledge into a library that can be self-served.
  
 ## What are GitOps templates?
@@ -23,7 +23,7 @@ Templates are simple YAML files, that can be enriched with Parameters, Variables
 
 Basically, the only restriction is that the template needs to be valid YAML. Besides that a rendered template can create any kind of resource. 
 
-**How do they fit today into Weave GitOps?**
+**How do they fit today into Flux-GUI?**
 
 We have added some metadata markup, which helps us to render the template nicely in the GUI. 
 
@@ -195,7 +195,7 @@ even if you specify a `path` for all the other resources in the template.
 The default path for a template has a few components:
 - From the params: `CLUSTER_NAME` or `RESOURCE_NAME`, **required**.
 - From the params: `NAMESPACE`, default: `default`
-- From values.yaml for the Weave GitOps Enterprise `mccp` chart: `values.config.capi.repositoryPath`, default: `clusters/management/clusters`
+- From values.yaml for the Flux-GUI Enterprise `mccp` chart: `values.config.capi.repositoryPath`, default: `clusters/management/clusters`
 
 These are composed to create the path:
 `${repositoryPath}/${NAMESPACE}/${CLUSTER_OR_RESOURCE_NAME}.yaml`
@@ -403,7 +403,7 @@ spec:
 Load templates into the cluster by adding them to your flux managed git repository or by using apply directly with
 `kubectl apply -f capi-template.yaml`
 
-Weave GitOps will search for templates in the `default` namespace. This can be changed by configuring the `config.capi.namespace` value in the helm chart.
+Flux-GUI will search for templates in the `default` namespace. This can be changed by configuring the `config.capi.namespace` value in the helm chart.
 
 ## Full CAPD docker template example
 

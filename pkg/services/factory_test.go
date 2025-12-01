@@ -7,9 +7,9 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/weaveworks/weave-gitops/pkg/flux/fluxfakes"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders/gitprovidersfakes"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/flux/fluxfakes"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders/gitprovidersfakes"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 var _ = Describe("Services factory", func() {

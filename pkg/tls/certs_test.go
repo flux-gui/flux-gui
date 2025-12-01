@@ -8,7 +8,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	wegotls "github.com/weaveworks/weave-gitops/pkg/tls"
+	wegotls "github.com/flux-gui/flux-gui/pkg/tls"
 )
 
 func TestSelfSignedCertificate(t *testing.T) {

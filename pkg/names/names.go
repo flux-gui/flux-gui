@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
 )
 
 const MaxKubernetesResourceNameLength = 63

@@ -1,5 +1,5 @@
 /**
- * This file holds the protobuf definitions for the Weave GitOps gRPC API.
+ * This file holds the protobuf definitions for the Flux-GUI gRPC API.
  * Messages and enums are defined in types.proto.
  */
 syntax = "proto3";
@@ -12,20 +12,20 @@ import "protoc-gen-openapiv2/options/annotations.proto";
 
 import "api/core/types.proto";
 
-option go_package = "github.com/weaveworks/weave-gitops/core/api";
+option go_package = "github.com/flux-gui/flux-gui/core/api";
 
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
     info: {
-      title: "Weave GitOps Core API",
+      title: "Flux-GUI Core API",
       version: "0.1";
-      description: "The API handles operations for Weave GitOps Core";
+      description: "The API handles operations for Flux-GUI Core";
     };
     consumes: "application/json";
     produces: "application/json";
 };
 
 /**
- * Weave GitOps Core API service definition
+ * Flux-GUI Core API service definition
  */
 service Core {
     /*
@@ -65,8 +65,8 @@ service Core {
     }
 
     /*
-    * ListRuntimeObjects lists Weave GitOps runtime components.
-    * Weave GitOps runtime is composed of Flux runtime but also other components
+    * ListRuntimeObjects lists Flux-GUI runtime components.
+    * Flux-GUI runtime is composed of Flux runtime but also other components
     * in the ecosystem like TF-controller or Policy Agent.
     */
     rpc ListRuntimeObjects(ListRuntimeObjectsRequest)
@@ -77,8 +77,8 @@ service Core {
     }
 
     /*
-    * ListRuntimeCrds lists Weave GitOps runtime components CRDs.
-    * Weave GitOps runtime is composed of Flux runtime but also other components
+    * ListRuntimeCrds lists Flux-GUI runtime components CRDs.
+    * Flux-GUI runtime is composed of Flux runtime but also other components
     * in the ecosystem like TF-controller or Policy Agent.
     */
     rpc ListRuntimeCrds(ListRuntimeCrdsRequest)

@@ -8,9 +8,9 @@ import (
 	"github.com/go-logr/logr"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 
-	core "github.com/weaveworks/weave-gitops/core/server"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
-	"github.com/weaveworks/weave-gitops/pkg/server/middleware"
+	core "github.com/flux-gui/flux-gui/core/server"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/server/middleware"
 )
 
 var PublicRoutes = []string{

@@ -1,12 +1,12 @@
-# Weave GitOps Security
+# Flux-GUI Security
 
-This document defines security reporting, handling and disclosure information for the Weave GitOps project and community.
+This document defines security reporting, handling and disclosure information for the Flux-GUI project and community.
 
 ## Security Process
 
 ### Report a Vulnerability
 
-We're very thankful for – and if desired happy to credit – security researchers and users who report vulnerabilities to the Weave GitOps community.
+We're very thankful for – and if desired happy to credit – security researchers and users who report vulnerabilities to the Flux-GUI community.
 
 - To make a report please email the private security list at <security@weaveworks.org> with the details.
   We ask that reporters act in good faith by not disclosing the issue to others.
@@ -28,7 +28,7 @@ Our Security Team consists of project maintainers and Weaveworks employees.
 
 ### Disclosures
 
-Vulnerability disclosures are announced publicly through our [security advisories](https://github.com/weaveworks/weave-gitops/security/advisories).
+Vulnerability disclosures are announced publicly through our [security advisories](https://github.com/flux-gui/flux-gui/security/advisories).
 Disclosures will contain an overview, details about the vulnerability, a fix that will typically be an update, and optionally a workaround if one is available.
 
 We will coordinate publishing disclosures and security releases in a way that is realistic and necessary for end users.

@@ -5,7 +5,7 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 var _ kube.ClientGetter = &FakeClientGetter{}

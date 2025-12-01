@@ -5,7 +5,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
 )
 
 type FakeGithubAuthClient struct {

@@ -17,8 +17,8 @@ import (
 	"github.com/yannh/kubeconform/pkg/resource"
 	"github.com/yannh/kubeconform/pkg/validator"
 
-	"github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/sourceignore"
+	"github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/sourceignore"
 )
 
 func Validate(log logger.Logger, targetDir, rootDir, kubernetesVersion, fluxVersion string) error {

@@ -1,5 +1,5 @@
 ---
-title: Install Weave GitOps Enterprise
+title: Install Flux-GUI Enterprise
 hide_title: true
 pagination_next: enterprise/getting-started/releases-enterprise
 ---
@@ -12,10 +12,10 @@ import oauthBitbucket from '/img/oauth-bitbucket.png';
 import oauthAzureDevOps from '/img/oauth-azure-devops.png';
 import oauthAzureDevOpsSuccess from '/img/oauth-azure-devops-success.png';
 
-## Install Weave GitOps Enterprise<TierLabel tiers="Enterprise" />
+## Install Flux-GUI Enterprise<TierLabel tiers="Enterprise" />
 
 :::info
-To purchase an entitlement to Weave GitOps Enterprise, please contact [info@weaveworks.org](mailto:info@weaveworks.org).
+To purchase an entitlement to Flux-GUI Enterprise, please contact [info@weaveworks.org](mailto:info@weaveworks.org).
 :::
 
 Follow the instructions on this page to:
@@ -28,7 +28,7 @@ import TOCInline from "@theme/TOCInline";
            })()} />
 
 :::tip
-There is no need to install the open source version of Weave GitOps before installing Weave GitOps Enterprise.
+There is no need to install the open source version of Flux-GUI before installing Flux-GUI Enterprise.
 :::
 
 ### Prep Step: Create a Repository
@@ -45,7 +45,7 @@ To get you started, we'll cover:
 - `kind` as our management cluster with the _CAPD_ provider
 - **EKS** as our management cluster with the _CAPA_ provider
 
-Note that Weave GitOps Enterprise supports any combination of management cluster and CAPI provider.
+Note that Flux-GUI Enterprise supports any combination of management cluster and CAPI provider.
 
 <Tabs groupId="infrastructure" default>
 <TabItem value="kind" label="kind">
@@ -389,7 +389,7 @@ Commit and push all the files
 
 ```bash
 git add clusters/management/weave-gitops-enterprise.yaml
-git commit -m "Deploy Weave GitOps Enterprise"
+git commit -m "Deploy Flux-GUI Enterprise"
 git push
 ```
 
@@ -418,7 +418,7 @@ kubectl create secret generic cluster-user-auth \
 ```
 
 ### 7. Install the CLI
-Install the Weave GitOps Enterprise CLI tool.
+Install the Flux-GUI Enterprise CLI tool.
 You can use brew or curl.
 
 ```console

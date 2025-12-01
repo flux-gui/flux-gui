@@ -11,7 +11,7 @@ import (
 	fakeclientset "k8s.io/client-go/kubernetes/fake"
 	kubetesting "k8s.io/client-go/testing"
 
-	"github.com/weaveworks/weave-gitops/pkg/services/check"
+	"github.com/flux-gui/flux-gui/pkg/services/check"
 )
 
 func TestKubernetesVersionWithError(t *testing.T) {

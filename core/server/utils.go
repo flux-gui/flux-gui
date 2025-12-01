@@ -4,7 +4,7 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	api "github.com/weaveworks/weave-gitops/pkg/api/core"
+	api "github.com/flux-gui/flux-gui/pkg/api/core"
 )
 
 func getMatchingLabels(appName string) client.MatchingLabels {

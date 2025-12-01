@@ -48,7 +48,7 @@ describe("Footer", () => {
         );
       });
 
-      await waitFor(() => expect(screen.getByText("Weave GitOps:")));
+      await waitFor(() => expect(screen.getByText("Flux-GUI:")));
       const footer = screen.getByRole("footer");
       expect(footer).toMatchSnapshot();
     });
@@ -66,7 +66,7 @@ describe("Footer", () => {
         );
       });
 
-      await waitFor(() => expect(screen.getByText("Weave GitOps:")));
+      await waitFor(() => expect(screen.getByText("Flux-GUI:")));
       const footer = screen.getByRole("footer");
       expect(footer).toMatchSnapshot();
     });

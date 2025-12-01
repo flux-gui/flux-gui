@@ -5,7 +5,7 @@ import (
 
 	"k8s.io/client-go/rest"
 
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 // UserPrefixes contains the prefixes for the user and groups

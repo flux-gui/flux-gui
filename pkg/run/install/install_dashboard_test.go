@@ -21,10 +21,10 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client/fake"
 	"sigs.k8s.io/yaml"
 
-	coretypes "github.com/weaveworks/weave-gitops/core/server/types"
-	"github.com/weaveworks/weave-gitops/pkg/config"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	coretypes "github.com/flux-gui/flux-gui/core/server/types"
+	"github.com/flux-gui/flux-gui/pkg/config"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 const (

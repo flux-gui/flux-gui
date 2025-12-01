@@ -23,7 +23,7 @@ func GenerateSelfSignedCertificate(sans ...string) (Certificate, error) {
 	cert := &x509.Certificate{
 		SerialNumber: big.NewInt(42),
 		Subject: pkix.Name{
-			CommonName: "Weave GitOps CLI",
+			CommonName: "Flux-GUI CLI",
 		},
 		NotBefore:             notBefore,
 		NotAfter:              notBefore.Add(3 * 24 * time.Hour),

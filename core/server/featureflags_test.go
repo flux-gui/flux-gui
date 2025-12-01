@@ -8,14 +8,14 @@ import (
 	. "github.com/onsi/gomega"
 	"k8s.io/client-go/rest"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/fetcher"
-	"github.com/weaveworks/weave-gitops/core/server"
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
-	"github.com/weaveworks/weave-gitops/pkg/health"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/fetcher"
+	"github.com/flux-gui/flux-gui/core/server"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/pkg/health"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 func TestGetFeatureFlags(t *testing.T) {

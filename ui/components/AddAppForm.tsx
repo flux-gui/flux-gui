@@ -41,7 +41,7 @@ function AddAppForm({
         </Spacer>
         <Spacer>
           <FormInput
-            helperText="The name of the application to be displayed in Weave GitOps."
+            helperText="The name of the application to be displayed in Flux-GUI."
             label="Display Name"
             name="displayName"
             variant="outlined"

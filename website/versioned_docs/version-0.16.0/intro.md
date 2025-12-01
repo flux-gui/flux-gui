@@ -3,13 +3,13 @@ title: Introduction
 sidebar_position: 0
 hide_title: true
 ---
-# Weave GitOps
+# Flux-GUI
 
-Weave GitOps is a powerful extension to [Flux](https://fluxcd.io), a leading GitOps engine and CNCF project. Weave GitOps provides insights into your application deployments, and makes continuous delivery with GitOps easier to adopt and scale across your teams.
+Flux-GUI is a powerful extension to [Flux](https://fluxcd.io), a leading GitOps engine and CNCF project. Flux-GUI provides insights into your application deployments, and makes continuous delivery with GitOps easier to adopt and scale across your teams.
 
 Its web UI surfaces key information to help application operators easily discover and resolve issues. The intuitive interface provides a guided experience to build understanding and simplify getting started for new users; they can easily discover the relationship between Flux objects and navigate to deeper levels of information as required.
 
-Weave GitOps is an open source project sponsored by [Weaveworks](https://weave.works) - the GitOps company, and original creators of [Flux](https://fluxcd.io).
+Flux-GUI is an open source project sponsored by [Weaveworks](https://weave.works) - the GitOps company, and original creators of [Flux](https://fluxcd.io).
 
 ## Why adopt GitOps?
 
@@ -32,7 +32,7 @@ To learn more about GitOps, check out these resources:
 
 ## Getting Started
 
-To start your own journey with Weave GitOps, please see [Installation](./installation/index.mdx) and [Getting Started](./getting-started.mdx).
+To start your own journey with Flux-GUI, please see [Installation](./installation/index.mdx) and [Getting Started](./getting-started.mdx).
 
 Here is a quick demo of what you can look forward to:
 
@@ -63,9 +63,9 @@ import ReactPlayer from "react-player/lazy";
   - Multitenancy, multiple git repositories, multiple clusters
   - Alerts and notifications
 
-## Weave GitOps Enterprise
+## Flux-GUI Enterprise
 
-Weave GitOps Enterprise (WGE) provides ops teams with an easy way to assess the
+Flux-GUI Enterprise (WGE) provides ops teams with an easy way to assess the
 health of multiple clusters in a single place. It shows cluster information such as
 Kubernetes version and number of nodes and provides details about the GitOps operations
 on those clusters, such as Git repositories and recent commits. Additionally, it

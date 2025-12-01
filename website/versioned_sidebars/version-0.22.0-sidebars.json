@@ -20,7 +20,7 @@
           "items": [
             {
               "type": "category",
-              "label": "0. Install Weave GitOps",
+              "label": "0. Install Flux-GUI",
               "collapsed": true,
               "link": {
                 "type": "doc",
@@ -30,7 +30,7 @@
                 "installation/weave-gitops",
                 {
                   "type": "category",
-                  "label": "Weave GitOps Enterprise",
+                  "label": "Flux-GUI Enterprise",
                   "link": {
                     "type": "doc",
                     "id": "installation/weave-gitops-enterprise/index"

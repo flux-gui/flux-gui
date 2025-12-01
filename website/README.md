@@ -1,4 +1,4 @@
-# Weave GitOps Product Website
+# Flux-GUI Product Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 It requires Node.js installed on your system. Install or Update your current setup for Node.js from [here](https://nodejs.org/en/download/)
@@ -178,4 +178,4 @@ Deployment happens automatically (once the tests pass) upon merging to the
 
 This section lists commonly used terms in the docs in an effort to promote consistency.
 
-- `Leaf clusters`: used in Weave GitOps Enterprise to describe any CAPI or non-CAPI clusters that appear in the `Clusters` section of the UI. Typically, these clusters are running application workloads.
+- `Leaf clusters`: used in Flux-GUI Enterprise to describe any CAPI or non-CAPI clusters that appear in the `Clusters` section of the UI. Typically, these clusters are running application workloads.

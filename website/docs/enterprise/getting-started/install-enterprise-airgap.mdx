@@ -13,7 +13,7 @@ From [wikipedia](https://en.wikipedia.org/wiki/Air_gap_(networking))
 >An air gap, air wall, air gapping or disconnected network is a network security measure employed on one or more computers
 to ensure that a secure computer network is physically isolated from unsecured networks, such as the public Internet or an unsecured local area network...
 
-This document guides on how to install Weave GitOps Enterprise (WGE) in a restricted environment.
+This document guides on how to install Flux-GUI Enterprise (WGE) in a restricted environment.
 
 # Before You Start
 
@@ -379,7 +379,7 @@ spec:
 
 </details>
 
-At this stage you should have a local management cluster with Weave GitOps Enterprise installed.
+At this stage you should have a local management cluster with Flux-GUI Enterprise installed.
 
 ```bash
 ➜ kubectl get pods -A
@@ -487,8 +487,8 @@ ghcr.io/weaveworks-liquidmetal/flintlock-kernel:5.10.77
 
 ## Airgap Install
 
-### Weave GitOps Enterprise
-At this stage you have in your private registry both the Helm charts and container images required to install Weave GitOps
+### Flux-GUI Enterprise
+At this stage you have in your private registry both the Helm charts and container images required to install Flux-GUI
 Enterprise. Now you are ready to install WGE from your private registry.
 
 Follow the instructions to install WGE with the following considerations:
@@ -496,7 +496,7 @@ Follow the instructions to install WGE with the following considerations:
 1. Adjust Helm Releases `spec.chart.spec.sourceRef` to tell Flux to pull Helm charts from your Helm repo.
 2. Adjust Helm Releases `spec.values` to use the container images from your private registry.
 
-An example of how it would look for Weave GitOps Enterprise is shown below.
+An example of how it would look for Flux-GUI Enterprise is shown below.
 
 <details>
 <summary>Expand to view example WGE manifest</summary>

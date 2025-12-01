@@ -4,8 +4,8 @@ package fluxfakes
 import (
 	"sync"
 
-	"github.com/weaveworks/weave-gitops/pkg/flux"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/flux"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
 )
 
 type FakeFlux struct {

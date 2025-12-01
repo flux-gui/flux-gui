@@ -9,7 +9,7 @@ import TierLabel from "@site/docs/_components/TierLabel";
 
 ## Prerequisites
 
-See also our [guide to installing Weave GitOps Enterprise on Azure](install-enterprise-azure.mdx):
+See also our [guide to installing Flux-GUI Enterprise on Azure](install-enterprise-azure.mdx):
 - An Azure cluster deployed with either the Azure Portal or Azure CLI tools.
 - Azure Flux add-on deployed by adding a GitOps configuration, either via the Azure Portal or the CLI tool.
 
@@ -36,9 +36,9 @@ The CRDs that this FluxConfig generates are Flux CRDs, as follows:
 - GitRepositories
 - Kustomizations
 
-These generated resources are viewable through Weave GitOps Enterprise.
+These generated resources are viewable through Flux-GUI Enterprise.
 
-Weave GitOps itself is deployed by Flux using a HelmRelease that pulls the Helm Chart. It doesn’t need to install Flux, as it is assumed that Flux is already deployed. Therefore it can use the Azure Flux add-on, which poses no conflicts with WGE itself.
+Flux-GUI itself is deployed by Flux using a HelmRelease that pulls the Helm Chart. It doesn’t need to install Flux, as it is assumed that Flux is already deployed. Therefore it can use the Azure Flux add-on, which poses no conflicts with WGE itself.
 
 Incompatibilities exist between the Azure Flux add-on and CNCF Flux. They should not be run at the same time, on the same cluster, due to conflicts in the CRD management. If the Flux bootstrapping process IS run on a cluster with Azure Flux add-on, it will override the Azure Flux add-on with the Flux version used in the bootstrap. Also, it would add Flux manifests to the source Git repository. This would be undesirable.
 

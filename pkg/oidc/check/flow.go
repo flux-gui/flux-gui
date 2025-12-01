@@ -12,8 +12,8 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 type Options struct {

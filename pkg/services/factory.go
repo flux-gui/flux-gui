@@ -6,11 +6,11 @@ import (
 
 	"github.com/go-logr/logr"
 
-	"github.com/weaveworks/weave-gitops/pkg/flux"
-	"github.com/weaveworks/weave-gitops/pkg/git"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/pkg/flux"
+	"github.com/flux-gui/flux-gui/pkg/git"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
 )
 
 //go:generate go run github.com/maxbrunsfeld/counterfeiter/v6 -generate

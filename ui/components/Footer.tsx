@@ -35,7 +35,7 @@ function Footer({ className }: Props) {
           },
         },
         {
-          productName: "Weave GitOps",
+          productName: "Flux-GUI",
           appVersion: appVersion,
         },
       ]

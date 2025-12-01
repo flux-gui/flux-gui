@@ -16,7 +16,7 @@ important than a strict noun-verb syntax.
 
 ## Decision
 
-Update the Weave GitOps CLI to have a verb-noun syntax.  E.g., `gitops add app`.
+Update the Flux-GUI CLI to have a verb-noun syntax.  E.g., `gitops add app`.
 
 ## Consequences
 

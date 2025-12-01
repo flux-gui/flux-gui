@@ -11,12 +11,12 @@ export default function HomepageFeatures() {
     <div>
       <div className="container text--center margin-bottom--xl margin-top--lg">
         <h2>
-        Weave GitOps is a powerful extension to <Link to="https://fluxcd.io">Flux</Link>,
+        Flux-GUI is a powerful extension to <Link to="https://fluxcd.io">Flux</Link>,
         a leading GitOps engine and CNCF project.
         </h2>
 
         <h2>
-        Weave GitOps provides insights into your
+        Flux-GUI provides insights into your
         application deployments, and makes continuous delivery with GitOps easier to adopt
         and scale across your teams.
         </h2>

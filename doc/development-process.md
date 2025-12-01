@@ -113,7 +113,7 @@ Our frontend tests:
 
 We're re-working our integration tests. Coming back soon.
 
-## Contributing to Weave GitOps documentation
+## Contributing to Flux-GUI documentation
 
 See [here](../website/README.md) for more details.
 

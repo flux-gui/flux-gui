@@ -1,5 +1,5 @@
 ---
-title: Weave GitOps Enterprise
+title: Flux-GUI Enterprise
 hide_title: true
 pagination_next: "getting-started"
 ---
@@ -9,21 +9,21 @@ import TabItem from "@theme/TabItem";
 import TierLabel from "../../_components/TierLabel";
 import CurlCodeBlock from "../../_components/CurlCodeBlock";
 
-## Installing Weave GitOps Enterprise<TierLabel tiers="enterprise" />
+## Installing Flux-GUI Enterprise<TierLabel tiers="enterprise" />
 
-Weave GitOps Enterprise (WGE) provides ops teams with an easy way to assess the
+Flux-GUI Enterprise (WGE) provides ops teams with an easy way to assess the
 health of multiple clusters in a single place. It shows cluster information such as
 Kubernetes version and number of nodes and provides details about the GitOps operations
 on those clusters, such as Git repositories and recent commits. Additionally, it
 aggregates Prometheus alerts to assist with troubleshooting.
 
-To purchase entitlement to Weave GitOps Enterprise please contact [info@weaveworks.org](mailto:info@weaveworks.org)
+To purchase entitlement to Flux-GUI Enterprise please contact [info@weaveworks.org](mailto:info@weaveworks.org)
 
 :::note 
-There is no need to install Weave GitOps (OSS) before installing Weave GitOps Enterprise
+There is no need to install Flux-GUI (OSS) before installing Flux-GUI Enterprise
 :::
 
-To install Weave GitOps Enterprise
+To install Flux-GUI Enterprise
 
 import TOCInline from "@theme/TOCInline";
 
@@ -39,7 +39,7 @@ To get you started in this document we'll cover:
 - `kind` as our management cluster with the _CAPD_ provider
 - **EKS** as our management cluster with the _CAPA_ provider
 
-However Weave GitOps Enterprise supports any combination of management cluster and CAPI provider.
+However Flux-GUI Enterprise supports any combination of management cluster and CAPI provider.
 
 <Tabs groupId="infrastructure" default>
 <TabItem value="kind" label="kind">
@@ -296,7 +296,7 @@ Commit and push all the files
 
 ```bash
 git add clusters/management/weave-gitops-enterprise.yaml
-git commit -m "Deploy Weave GitOps Enterprise"
+git commit -m "Deploy Flux-GUI Enterprise"
 git push
 ```
 
@@ -325,7 +325,7 @@ kubectl create secret generic cluster-user-auth \
 ```
 
 ### Install CLI
-Install the Weave GitOps Enterprise CLI tool.
+Install the Flux-GUI Enterprise CLI tool.
 You can use brew or curl
 
 ```console
@@ -351,7 +351,7 @@ Then you can head over to either:
 
 The [TF-Controller](https://weaveworks.github.io/tf-controller/) is a controller for Flux to reconcile Terraform resources in a GitOps way. 
 
-With Flux and the TF-Controller, Weave GitOps Enterprise makes it easy to add Terraform templates to clusters and continuously reconcile any changes made to the Terraform source manifest. 
+With Flux and the TF-Controller, Flux-GUI Enterprise makes it easy to add Terraform templates to clusters and continuously reconcile any changes made to the Terraform source manifest. 
 
 Check out our guide on how to [use Terraform templates](../../guides/using-terraform-templates.mdx), and why not try your hands at using it with the RDS example!
 

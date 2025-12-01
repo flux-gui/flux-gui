@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/weaveworks/weave-gitops/pkg/git"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/git"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 func CommitAndPush(ctx context.Context, client git.Git, commitMsg string, logger logger.Logger, filters ...func(string) bool) error {

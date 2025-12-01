@@ -25,11 +25,11 @@ import (
 	kyaml "sigs.k8s.io/kustomize/kyaml/yaml"
 	"sigs.k8s.io/yaml"
 
-	coretypes "github.com/weaveworks/weave-gitops/core/server/types"
-	"github.com/weaveworks/weave-gitops/pkg/config"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/run"
-	"github.com/weaveworks/weave-gitops/pkg/utils"
+	coretypes "github.com/flux-gui/flux-gui/core/server/types"
+	"github.com/flux-gui/flux-gui/pkg/config"
+	"github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/run"
+	"github.com/flux-gui/flux-gui/pkg/utils"
 )
 
 type DashboardType int32
@@ -336,7 +336,7 @@ func makeHelmRepository(name, namespace string) *sourcev1.HelmRepository {
 				coretypes.CreatedByLabel: "weave-gitops-cli",
 			},
 			Annotations: map[string]string{
-				"metadata.weave.works/description": "This is the source location for the Weave GitOps Dashboard's helm chart.",
+				"metadata.weave.works/description": "This is the source location for the Flux-GUI Dashboard's helm chart.",
 			},
 		},
 		Spec: sourcev1.HelmRepositorySpec{
@@ -362,7 +362,7 @@ func makeHelmRelease(log logger.Logger, name, namespace, username, passwordHash,
 			Name:      name,
 			Namespace: namespace,
 			Annotations: map[string]string{
-				"metadata.weave.works/description": "This is the Weave GitOps Dashboard.  It provides a simple way to get insights into your GitOps workloads.",
+				"metadata.weave.works/description": "This is the Flux-GUI Dashboard.  It provides a simple way to get insights into your GitOps workloads.",
 			},
 		},
 		Spec: helmv2.HelmReleaseSpec{

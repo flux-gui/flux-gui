@@ -1,7 +1,7 @@
 # Helm chart reference
 <!-- The contents of this file is generated directly from the chart's values.yaml, please make any edits there -->
 
-This is a reference of all the configurable values in Weave GitOps's
+This is a reference of all the configurable values in Flux-GUI's
 Helm chart. This is intended for customizing your installation after
 you've gone through the [getting started](../intro-weave-gitops.mdx) guide.
 
@@ -23,7 +23,7 @@ This reference was generated for the chart version 4.0.36 which installs weave g
 | envVars[0].value | string | `"true"` |  |
 | envVars[1].name | string | `"WEAVE_GITOPS_FEATURE_CLUSTER"` |  |
 | envVars[1].value | string | `"false"` |  |
-| envVars[2] | object | `{"name":"WEAVE_GITOPS_FEATURE_GITOPS_RUNTIME","value":"false"}` | Enable this feature flag if you want to expand Flux Runtime UI with other Weave GitOps components like Policy Agent or TF-Controller. Ensure that Weave GitOps Deployment and CRDs have the label 'app.kubernetes.io/part-of=weave-gitops'. See https://docs.gitops.weaveworks.org/docs/open-source/getting-started/install-OSS for more info. |
+| envVars[2] | object | `{"name":"WEAVE_GITOPS_FEATURE_GITOPS_RUNTIME","value":"false"}` | Enable this feature flag if you want to expand Flux Runtime UI with other Flux-GUI components like Policy Agent or TF-Controller. Ensure that Flux-GUI Deployment and CRDs have the label 'app.kubernetes.io/part-of=weave-gitops'. See https://docs.gitops.weaveworks.org/docs/open-source/getting-started/install-OSS for more info. |
 | extraVolumeMounts | list | `[]` |  |
 | extraVolumes | list | `[]` |  |
 | fullnameOverride | string | `""` |  |

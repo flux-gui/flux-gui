@@ -11,10 +11,10 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/rest"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 func TestUsersNamespaces(t *testing.T) {

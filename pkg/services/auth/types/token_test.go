@@ -6,7 +6,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/weaveworks/weave-gitops/pkg/services/auth/internal"
+	"github.com/flux-gui/flux-gui/pkg/services/auth/internal"
 )
 
 var _ = Describe("TokenResponseState", func() {

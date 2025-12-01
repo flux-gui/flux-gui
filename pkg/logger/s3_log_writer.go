@@ -10,8 +10,8 @@ import (
 	"github.com/go-logr/logr"
 	"github.com/minio/minio-go/v7"
 
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/compositehash"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/compositehash"
 )
 
 type S3LogWriter struct {

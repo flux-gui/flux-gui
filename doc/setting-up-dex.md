@@ -4,7 +4,7 @@
 
 - A Kubernetes cluster such as [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/) cluster running a 
 [Flux-supported version of Kubernetes](https://fluxcd.io/docs/installation/#prerequisites)
-- Weave GitOps is [installed](../installation/overview.mdx) and [TLS has been enabled](../configuration/tls.md).
+- Flux-GUI is [installed](../installation/overview.mdx) and [TLS has been enabled](../configuration/tls.md).
 
 ## What is Dex?
 
@@ -168,7 +168,7 @@ spec:
         type: memory
 
       staticClients:
-      - name: 'Weave GitOps Core'
+      - name: 'Flux-GUI Core'
         id: weave-gitops
         secret: AiAImuXKhoI5ApvKWF988txjZ+6rG3S7o6X5En
         redirectURIs:

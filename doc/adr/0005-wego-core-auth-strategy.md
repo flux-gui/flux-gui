@@ -1,4 +1,4 @@
-# 5. Weave GitOps Core Auth Strategy
+# 5. Flux-GUI Core Auth Strategy
 
 Date: 2021-07-22
 
@@ -12,7 +12,7 @@ Authentication to Git, or git hosts is no longer supported
 
 ## Problem
 
-Weave GitOps needs to be able to do read and write operations against three different "back ends":
+Flux-GUI needs to be able to do read and write operations against three different "back ends":
 
 - The git repository for an Application
 - The repository "host" (Github, Gitlab, Bitbucket, etc), known as a Git Provider, for an Application
@@ -47,8 +47,8 @@ Operations such as creating pull requests (or "merge requests" in the case of Gi
   - No `client_secret` required here
 
 - [Github Web Application Flow](https://docs.github.com/en/developers/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps#web-application-flow)
-  - Note: this flow **does** require a `client_secret`, so to utilize it, users will need to create their own GitHub app (`client_id` and `client_secret` pair), then secure and reveal those to Weave GitOps as environment variables.
-  - This is considered the "advanced" use case for users who wish to install Weave GitOps as a permanent resident in the cluster.
+  - Note: this flow **does** require a `client_secret`, so to utilize it, users will need to create their own GitHub app (`client_id` and `client_secret` pair), then secure and reveal those to Flux-GUI as environment variables.
+  - This is considered the "advanced" use case for users who wish to install Flux-GUI as a permanent resident in the cluster.
   - See the Design -> Advanced Use Case section below
 
 ### Kubernetes Cluster
@@ -69,7 +69,7 @@ In addition, flows that require a `client_secret` would require us to embed it i
 
 ### UX Concerns
 
-Given that the Weave GitOps UI and API server may be running on a user's cluster, we may not always know the OAuth callback URL ahead of time. For this reason, we will need to use OAuth flows that do not require a static `redirect_uri`. The flows listed above in the Git Providers section fit that constraint.
+Given that the Flux-GUI UI and API server may be running on a user's cluster, we may not always know the OAuth callback URL ahead of time. For this reason, we will need to use OAuth flows that do not require a static `redirect_uri`. The flows listed above in the Git Providers section fit that constraint.
 
 We will need to ensure that the `redirect_uri` is configurable by the user via environment variables. This will allow users to run and expose the UI/API servers on whichever endpoint they choose.
 
@@ -93,11 +93,11 @@ TLDR:
 2. We use the resulting access_token to push a Deploy Key to the repository (giving us `git` permissions)
 3. We create a pull request for the repository via the Git Provider HTTP API
 
-For browser security, we will convert the Git Provider OAuth token to a JSON Web Token (JWT) to protect against Cross-site Scripting (XSS) attacks. The encrypted JWT will allow a malicious script to authenticate with the Weave GitOps API only, whereas passing the unencrypted OAuth token to the browser would allow a malicious script to authenticate with the Github API.
+For browser security, we will convert the Git Provider OAuth token to a JSON Web Token (JWT) to protect against Cross-site Scripting (XSS) attacks. The encrypted JWT will allow a malicious script to authenticate with the Flux-GUI API only, whereas passing the unencrypted OAuth token to the browser would allow a malicious script to authenticate with the Github API.
 
-In the intitial implementation, the key for encrypting and decrypting the JWT will be read as an environment variable. If the environment variable is not present, Weave GitOps will randomly generate a key on startup and store it in memory; this assumes a "singleton" installation with no horizontal scalability, and that every time Weave GitOps starts up, users will need to re-authenticate.
+In the intitial implementation, the key for encrypting and decrypting the JWT will be read as an environment variable. If the environment variable is not present, Flux-GUI will randomly generate a key on startup and store it in memory; this assumes a "singleton" installation with no horizontal scalability, and that every time Flux-GUI starts up, users will need to re-authenticate.
 
-Additionally, we do not plan on adding third-party scripts to the Weave GitOps UI to minimize the surface area for XSS attacks. This does NOT, however, account for NPM modules or other dependencies that we add to our app at build time.
+Additionally, we do not plan on adding third-party scripts to the Flux-GUI UI to minimize the surface area for XSS attacks. This does NOT, however, account for NPM modules or other dependencies that we add to our app at build time.
 
 In any of the documented flows from the Git Provider section, the `client_id` will be publicly exposed on every OAuth request via URL parameters. One possible attack vectory for exploiting the `client_id` will be to saturate the Git Provider and fill a given `client_id` request quota, effectively doing a denial-of-service attack. Luckily, it appears that Git Providers do their rate limiting on a per user or per IP Address basis:
 
@@ -109,7 +109,7 @@ In any of the documented flows from the Git Provider section, the `client_id` wi
 
 ### Advanced Use Case
 
-Most users who want to use Weave GitOps in a production setting will want to set up an OAuth 2.0 Authorization Code Grant flow, as this provides the best user experience\*. Weave GitOps will allow for configuration of such a flow by consuming environment variables supplied by the user. Users will need to register an application with their desired Git Provider supply their own `client_id` and `client_secret`, effectively taking the storing of those values out of the purview of Weave GitOps.
+Most users who want to use Flux-GUI in a production setting will want to set up an OAuth 2.0 Authorization Code Grant flow, as this provides the best user experience\*. Flux-GUI will allow for configuration of such a flow by consuming environment variables supplied by the user. Users will need to register an application with their desired Git Provider supply their own `client_id` and `client_secret`, effectively taking the storing of those values out of the purview of Flux-GUI.
 
 \*Access tokens from the Authorization Code Grant can be refreshed, so the user needs to complete the OAuth flow less often.
 
@@ -160,4 +160,4 @@ Implement the flow(s) defined in the "Design" section
 
 ## Consequences
 
-This document does not seek to provide any mapping between Kubernetes users and Git Provider users. That may be out of scope for the Weave GitOps Core edition, or may be implemented later.
+This document does not seek to provide any mapping between Kubernetes users and Git Provider users. That may be out of scope for the Flux-GUI Core edition, or may be implemented later.

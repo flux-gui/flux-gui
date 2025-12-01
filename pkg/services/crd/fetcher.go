@@ -9,7 +9,7 @@ import (
 	v1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	"k8s.io/apimachinery/pkg/util/wait"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
 )
 
 const watchCRDsFrequency = 30 * time.Second

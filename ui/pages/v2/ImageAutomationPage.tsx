@@ -27,7 +27,7 @@ function ImageAutomationPage() {
         <Flex wide tall column align>
           <MessageBox>
             <Text size="large" semiBold>
-              None of the clusters you have connected in Weave GitOps have the
+              None of the clusters you have connected in Flux-GUI have the
               requirements installed for Image Automation.
             </Text>
             <Spacer padding="medium" />

@@ -13,7 +13,7 @@ import (
 
 const (
 	ConfigFileName       = "weave-gitops-config.json"
-	WrongConfigFormatMsg = `Your CLI configuration for Weave GitOps should represent a JSON object format:
+	WrongConfigFormatMsg = `Your CLI configuration for Flux-GUI should represent a JSON object format:
 {
 	"analytics": true,
 	"userId": ""
@@ -41,7 +41,7 @@ func SetConfig(config *GitopsCLIConfig) {
 	sessionConfig = config
 }
 
-// GetConfig reads the CLI configuration for Weave GitOps from the config file
+// GetConfig reads the CLI configuration for Flux-GUI from the config file
 func GetConfig(shouldCreate bool) (*GitopsCLIConfig, error) {
 	if sessionConfig != nil {
 		return sessionConfig, nil
@@ -83,7 +83,7 @@ func GetConfig(shouldCreate bool) (*GitopsCLIConfig, error) {
 	return config, nil
 }
 
-// SaveConfig saves the CLI configuration for Weave GitOps to the config file
+// SaveConfig saves the CLI configuration for Flux-GUI to the config file
 func SaveConfig(config *GitopsCLIConfig) error {
 	configPath, err := getConfigPath(ConfigFileName)
 	if err != nil {
@@ -177,7 +177,7 @@ func readData(configFile *os.File) ([]byte, error) {
 	return data, nil
 }
 
-// parseConfig unmarshals the CLI configuration for Weave GitOps from the JSON blob
+// parseConfig unmarshals the CLI configuration for Flux-GUI from the JSON blob
 func parseConfig(data []byte, config *GitopsCLIConfig) error {
 	err := json.Unmarshal(data, &config)
 	if err != nil {

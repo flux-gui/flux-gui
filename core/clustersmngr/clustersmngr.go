@@ -7,7 +7,7 @@ import (
 
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
 )
 
 //go:generate go run github.com/maxbrunsfeld/counterfeiter/v6 -generate

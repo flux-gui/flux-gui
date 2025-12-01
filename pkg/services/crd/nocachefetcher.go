@@ -7,7 +7,7 @@ import (
 	"github.com/go-logr/logr"
 	v1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
 )
 
 // NewNoCacheFetcher creates a new fetcher without cache.

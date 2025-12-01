@@ -8,17 +8,17 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 ## AWS Marketplace
-Weave GitOps is also available via the AWS Marketplace.
+Flux-GUI is also available via the AWS Marketplace.
 
-The following steps will allow you to deploy the Weave GitOps product to an EKS cluster via a Helm Chart.
+The following steps will allow you to deploy the Flux-GUI product to an EKS cluster via a Helm Chart.
 
 These instructions presume you already have installed [`kubectl`](https://kubernetes.io/docs/tasks/tools/install-kubectl/),
 [`eksctl`](https://github.com/weaveworks/eksctl), [`helm`](https://github.com/helm/helm) and
 the [Helm S3 Plugin](https://github.com/hypnoglow/helm-s3).
 
-### Step 1: Subscribe to Weave GitOps on the AWS Marketplace
+### Step 1: Subscribe to Flux-GUI on the AWS Marketplace
 
-To deploy the managed Weave GitOps solution, first subscribe to the product on [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-vkn2wejad2ix4).
+To deploy the managed Flux-GUI solution, first subscribe to the product on [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-vkn2wejad2ix4).
 
 _Note: it may take ~20 minutes for your Subscription to become live and deployable._
 
@@ -78,7 +78,7 @@ eksctl create cluster -f cluster-config.yaml
 </TabItem>
 <TabItem value="Use an existing EKS Cluster" label="Use an existing EKS Cluster">
 
-In order to use the Weave GitOps container product,
+In order to use the Flux-GUI container product,
 your cluster must be configured to run containers with the correct IAM Policies.
 
 The recommended way to do this is via [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
@@ -144,7 +144,7 @@ echo $SA_ARN
 _This value will also be discoverable in your IAM console, and in the Outputs of the Cloud Formation
 template which created it._
 
-### Step 4: Install Weave GitOps
+### Step 4: Install Flux-GUI
 
 Copy the Chart URL from the Usage Instructions in AWS Marketplace, or download the file from the Deployment template to your workstation.
 
@@ -201,7 +201,7 @@ flux-system          wego-metering-f7jqp                                 1/1    
 flux-system          ww-gitops-weave-gitops-5bdc9f7744-vkh65             1/1     Running   0          53s
 ```
 
-Your Weave GitOps installation is now ready!
+Your Flux-GUI installation is now ready!
 
 ## Next steps
 

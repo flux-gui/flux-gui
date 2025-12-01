@@ -18,8 +18,8 @@ import (
 	"k8s.io/client-go/tools/portforward"
 	"k8s.io/client-go/transport/spdy"
 
-	"github.com/weaveworks/weave-gitops/core/logger"
-	clilogger "github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/core/logger"
+	clilogger "github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 type PortForwardSpec struct {

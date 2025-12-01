@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/root"
+	"github.com/flux-gui/flux-gui/cmd/gitops/root"
 )
 
 func main() {

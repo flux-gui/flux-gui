@@ -9,12 +9,12 @@ import TierLabel from "../_components/TierLabel";
   {frontMatter.title} <TierLabel tiers="Enterprise" />
 </h1>
 
-This guide will show you how to use a template to create a Terraform resource in Weave GitOps Enterprise.
+This guide will show you how to use a template to create a Terraform resource in Flux-GUI Enterprise.
 
 ## CLI Guide
 
 ### Prerequisites
-- Install [Weave GitOps Enterprise](../enterprise/getting-started/install-enterprise.mdx) and [enable TLS](../enterprise/getting-started/install-enterprise.mdx#tls-configuration).
+- Install [Flux-GUI Enterprise](../enterprise/getting-started/install-enterprise.mdx) and [enable TLS](../enterprise/getting-started/install-enterprise.mdx#tls-configuration).
 - Install [Terraform Controller](../terraform/get-started-terraform.mdx).
 
 ### 1. Add a template to your cluster
@@ -76,7 +76,7 @@ flux reconcile kustomization flux-system
 ```
 
 ### 2. Use the template to create a resource
-A resource can be created from a template by specifying the template's name and supplying values to it, as well as your Weave GitOps Enterprise username, password, and HTTP API endpoint.
+A resource can be created from a template by specifying the template's name and supplying values to it, as well as your Flux-GUI Enterprise username, password, and HTTP API endpoint.
 ```bash
 gitops add terraform --from-template sample-wge-tf-controller-template \
 --set="RESOURCE_NAME"="name" \

@@ -14,10 +14,10 @@ It aims to provide a simplified basic experience.
 
 ## Getting Started
 
-The templates exist as a Helm Chart in the [weave-gitops-quickstart](https://github.com/weaveworks/weave-gitops-quickstart)
+The templates exist as a Helm Chart in the [weave-gitops-quickstart](https://github.com/flux-gui/flux-gui-quickstart)
 github repo.
 
-To get started, add the following `HelmRelease` object to your Weave GitOps Enterprise
+To get started, add the following `HelmRelease` object to your Flux-GUI Enterprise
 configuration repo for your management cluster.
 
 <details>
@@ -34,7 +34,7 @@ spec:
   interval: 10m0s
   ref:
     branch: main
-  url: https://github.com/weaveworks/weave-gitops-quickstart
+  url: https://github.com/flux-gui/flux-gui-quickstart
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
@@ -56,7 +56,7 @@ spec:
 </details>
 
 Commit and merge the above file. Once the `HelmRelease` has been successfully
-deployed to your cluster, navigate to your Weave GitOps UI Dashboard. You will
+deployed to your cluster, navigate to your Flux-GUI UI Dashboard. You will
 see that the `templates` Chart is now deployed to your cluster.
 
 ![quickstart templates deployed](imgs/quickstart-templates-deployed.png)
@@ -69,7 +69,7 @@ templates are now available for use:
 ## Available Templates
 
 The following [pipeline](../pipelines/pipeline-templates.mdx) templates have
-been made available on your Weave GitOps Enterprise instance:
+been made available on your Flux-GUI Enterprise instance:
 
 - `pipeline-view`: A template to create a sample pipeline to visualize a
 	`HelmRelease` application delivered to dev, test and prod environments.
@@ -84,14 +84,14 @@ been made available on your Weave GitOps Enterprise instance:
 
 The above Quickstart templates are designed to provide a practical getting started
 experience. We encourage Platform Operators to start off with these templates
-within their team to ramp up on using Weave GitOps.
+within their team to ramp up on using Flux-GUI.
 
 If the need arises later, operators can always expand on these templates to
 develop their own set of self-service capabilities.
 
 ## Using `GitOpsTemplate`s as an Application Developer
 
-As a developer using Weave GitOps Enterprise, use the templates to explore
+As a developer using Flux-GUI Enterprise, use the templates to explore
 GitOps's capabilities. For example, to create a pipeline for your application:
 use the above template provided by your Operations team to create required
 resources. Once they have been added to your GitOps repository, you can adapt
@@ -101,7 +101,7 @@ the rendered resources to meet your needs.
 
 The Quickstart templates are maintained by the Weave Gitops team. If you would
 like to make alterations, suggest fixes, or even contribute a new template which
-you find cool, just head to the [repo](https://github.com/weaveworks/weave-gitops-quickstart)
+you find cool, just head to the [repo](https://github.com/flux-gui/flux-gui-quickstart)
 and open a new issue or PR!
 
 :::

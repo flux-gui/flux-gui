@@ -9,8 +9,8 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	coretypes "github.com/weaveworks/weave-gitops/core/server/types"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	coretypes "github.com/flux-gui/flux-gui/core/server/types"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 // Heuristic mapping from the Source controller version to the Flux version.

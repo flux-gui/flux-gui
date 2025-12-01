@@ -9,7 +9,7 @@ import TierLabel from "../_components/TierLabel";
 
 ## Multi-tenancy
 
-Some Cluster API providers allow you to choose the account or identity that the new cluster will be created with. This is often referred to as _Multi-tenancy_ in the CAPI world. Weave GitOps currently supports:
+Some Cluster API providers allow you to choose the account or identity that the new cluster will be created with. This is often referred to as _Multi-tenancy_ in the CAPI world. Flux-GUI currently supports:
 
 - [**AWS** multi-tenancy](https://cluster-api-aws.sigs.k8s.io/topics/multitenancy.html)
 - [**Azure** multi-tenancy](https://capz.sigs.k8s.io/topics/multitenancy.html)
@@ -52,7 +52,7 @@ spec:
         cluster.x-k8s.io/ns: "testlabel"
 ```
 
-We can select ask Weave GitOps to use the `test-account` when creating the cluster by using the _Infrastructure provider credentials_ dropdown on the _Create new cluster with template_ page:
+We can select ask Flux-GUI to use the `test-account` when creating the cluster by using the _Infrastructure provider credentials_ dropdown on the _Create new cluster with template_ page:
 
 ![Identity Selection](./img/identity-selection.png)
 
@@ -74,7 +74,7 @@ spec:
 
 The supported providers implement multi-tenancy by setting an `identityRef` on the the provider cluster object, e.g. `AWSCluster`, `AzureCluster` or `VSphereCluster`.
 
-Weave GitOps will search _all namespaces_ in the cluster for potential identities that can be used to create a cluster. The following identity `kind`s are currently supported and their corresponding Cluster kinds:
+Flux-GUI will search _all namespaces_ in the cluster for potential identities that can be used to create a cluster. The following identity `kind`s are currently supported and their corresponding Cluster kinds:
 
 - `AWSClusterStaticIdentity`: `AWSCluster`
 - `AWSClusterRoleIdentity`: `AWSCluster`

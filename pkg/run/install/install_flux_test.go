@@ -11,10 +11,10 @@ import (
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/weaveworks/weave-gitops/core/server"
-	coretypes "github.com/weaveworks/weave-gitops/core/server/types"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/run"
+	"github.com/flux-gui/flux-gui/core/server"
+	coretypes "github.com/flux-gui/flux-gui/core/server/types"
+	"github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/run"
 )
 
 const (

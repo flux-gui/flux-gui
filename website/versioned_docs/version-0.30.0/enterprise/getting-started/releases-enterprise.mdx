@@ -7,7 +7,7 @@ import TierLabel from "../../_components/TierLabel";
 # Releases <TierLabel tiers="Enterprise" />
 
 :::info
-This page details the changes for Weave GitOps Enterprise and its associated components. For Weave GitOps OSS - please see the release notes on [GitHub](https://github.com/weaveworks/weave-gitops/releases).
+This page details the changes for Flux-GUI Enterprise and its associated components. For Flux-GUI OSS - please see the release notes on [GitHub](https://github.com/flux-gui/flux-gui/releases).
 :::
 
 ## v0.30.0
@@ -63,7 +63,7 @@ sure that you read [these release notes](#v0290).
 
 ### 🚀 Enhancements
 
-- PR: #3126 - Uses weave-gitops [v0.29.0](https://github.com/weaveworks/weave-gitops/releases/tag/v0.29.0) that as
+- PR: #3126 - Uses weave-gitops [v0.29.0](https://github.com/flux-gui/flux-gui/releases/tag/v0.29.0) that as
 major changes include:
   - Support for Flux v2.0.0
   - Suspend/resume/reconcile Image Repositories
@@ -76,11 +76,11 @@ major changes include:
 
 ### ⚠️ Breaking changes
 
-We introduced a breaking change in this release by upgrading to Flux v2 APIs, notably `GitRepository` v1, `Kustomization` v1, and `Receiver` v1. This means that this version of Weave GitOps Enterprise is not compatible with previous versions of Flux v2, such as v0.41.x and earlier.
+We introduced a breaking change in this release by upgrading to Flux v2 APIs, notably `GitRepository` v1, `Kustomization` v1, and `Receiver` v1. This means that this version of Flux-GUI Enterprise is not compatible with previous versions of Flux v2, such as v0.41.x and earlier.
 
 ### ✍️ Action required
 
-Follow [Flux](https://github.com/fluxcd/flux2/releases/tag/v2.0.0) or [Weave GitOps](https://docs.gitops.weaveworks.org/docs/guides/fluxga-upgrade/) to upgrade to Flux v2 GA before upgrading Weave GitOps Enterprise.
+Follow [Flux](https://github.com/fluxcd/flux2/releases/tag/v2.0.0) or [Flux-GUI](https://docs.gitops.weaveworks.org/docs/guides/fluxga-upgrade/) to upgrade to Flux v2 GA before upgrading Flux-GUI Enterprise.
 :::
 
 ### Highlights
@@ -394,7 +394,7 @@ _Bug fixes_
 
 #### GitopsSets
 
-- New `cluster` generator allows you to interact with the Weave GitOps Cluster inventory. GitOps Clusters that are added and removed to the inventory are reflected by the generator. That can be used to target for example to manage applications across a fleet of clusters.
+- New `cluster` generator allows you to interact with the Flux-GUI Cluster inventory. GitOps Clusters that are added and removed to the inventory are reflected by the generator. That can be used to target for example to manage applications across a fleet of clusters.
 - Enhanced `gitRepository` generator can now scan directories and paths with the new `directory` option, which enables you to create for example dynamically Flux Kustomizations , based on your repository.
 - New `apiClient` generator allows you to query and endpoint, and provide data for your template.
 - Reconciliation metrics are now reported to the `/metrics` endpoint ready to be collected
@@ -414,7 +414,7 @@ _Bug fixes_
 2023-02-16
 ### Highlights
 
-This release contains dependency upgrades and bug fixes. For a larger list of updates, check out the [Weave GitOps v0.17.0](https://github.com/weaveworks/weave-gitops/releases/tag/v0.17.0) release.
+This release contains dependency upgrades and bug fixes. For a larger list of updates, check out the [Flux-GUI v0.17.0](https://github.com/flux-gui/flux-gui/releases/tag/v0.17.0) release.
 
 ## v0.16.0
 2023-02-02
@@ -446,8 +446,8 @@ No breaking changes
 2023-01-19
 ### Highlights
 
-#### Multi Repository support. Weave GitOps Enterprise adapts and scales to your repository structure
-- Weave GitOps Enterprise, is now supporting via the WGE GUI the selection of the Git Repository. Enabling to scale and match the desired Git Repository structure.
+#### Multi Repository support. Flux-GUI Enterprise adapts and scales to your repository structure
+- Flux-GUI Enterprise, is now supporting via the WGE GUI the selection of the Git Repository. Enabling to scale and match the desired Git Repository structure.
 
 #### GitOps Templates
 - Supporting path for Profiles, enabling to set the path for profiles in the template to configure where in the directory the HelmRelease gets created.
@@ -484,7 +484,7 @@ No breaking changes
 ### Highlights
 
 #### Secrets management
-- We are introducing new functionality into Weave GitOps Enterprise to help observe and manage secrets through external secrets operator (ESO). The new secrets UI will enable customers using ESO to observe and manage external secrets, as well as help them troubleshoot issues during their secrets creation and sync operations. In this release, we are including the ability to list all ExternalSecrets custom resources across multi-cluster environments. Users also will have the ability to navigate to each ExternalSecret and know the details of the secret, its sync status, and the last time this secret has been updated, as well as the latest events associated with the secret.
+- We are introducing new functionality into Flux-GUI Enterprise to help observe and manage secrets through external secrets operator (ESO). The new secrets UI will enable customers using ESO to observe and manage external secrets, as well as help them troubleshoot issues during their secrets creation and sync operations. In this release, we are including the ability to list all ExternalSecrets custom resources across multi-cluster environments. Users also will have the ability to navigate to each ExternalSecret and know the details of the secret, its sync status, and the last time this secret has been updated, as well as the latest events associated with the secret.
 
 #### Pipelines
 - Retry promotion on failure. Now if a promotion fails there is an automatic retry functionalty, you can configure the threshold and delay via the CLI.
@@ -554,14 +554,14 @@ spec:
 ```
 
 #### Workspace UI
-- Weave GitOps now provides a GUI for Workspaces.
+- Flux-GUI now provides a GUI for Workspaces.
 
 #### Enhanced Terraform Table in UI
-- Weave GitOps now provides more details on the Terraform inventory GUI page. Adding the type and identifier fields to the inventory table, plus filtering and a 'no data' message.
+- Flux-GUI now provides more details on the Terraform inventory GUI page. Adding the type and identifier fields to the inventory table, plus filtering and a 'no data' message.
 
 #### Keyboard shortcuts for "port forwards" on GitOps Run
-- Weave GitOps now building and printing a list of set up port forwards.
-- Weave GitOps now opening the selected port forward URL on key press. Listening for keypress is performed with the `github.com/mattn/go-tty` package (other options required pressing Enter after a keypress, this catches just a single numeric keypress) and opening URLs with the `github.com/pkg/browser` package.
+- Flux-GUI now building and printing a list of set up port forwards.
+- Flux-GUI now opening the selected port forward URL on key press. Listening for keypress is performed with the `github.com/mattn/go-tty` package (other options required pressing Enter after a keypress, this catches just a single numeric keypress) and opening URLs with the `github.com/pkg/browser` package.
 
 #### Minor fixes
 **[UI] Notifications** Fixed provider page showing a 404.
@@ -628,7 +628,7 @@ config
 - Support Azure DevOps and auto-remediation in commit-time enforcement.
 
 #### Admin User- simpler RBAC
-- Weave GitOps default admin user can now “read” all objects. Why is this important? As users are trying out Weave GitOps they will most likely try it out with some of their favorite Cloud Native tools such as Crossplane, Tekton, Istio, etc. This enables them to see all of those resources and explore the full power of Weave GitOps. We still do not recommend this user for “production-use” cases, and customers should always be pushed towards implementing OIDC with scoped roles.
+- Flux-GUI default admin user can now “read” all objects. Why is this important? As users are trying out Flux-GUI they will most likely try it out with some of their favorite Cloud Native tools such as Crossplane, Tekton, Istio, etc. This enables them to see all of those resources and explore the full power of Flux-GUI. We still do not recommend this user for “production-use” cases, and customers should always be pushed towards implementing OIDC with scoped roles.
 
 #### Pipelines - adding Pipelines through Templates
 - From the Pipelines view you can add new Pipelines in a way which leverages GitOpsTemplates, additionally - to help users configure these, we’ve provided [documentation](../../pipelines/pipelines-templates.mdx) which has some samples.
@@ -642,7 +642,7 @@ config
 Users of the Terraform Controller will be pleased to know we’ve addressed the issue where an error would be displayed if it had not been installed on all connected clusters.
 
 **Management cluster renaming**
-If the name of the cluster where Weave GitOps Enterprise is installed, was changed from the default of management through the config.cluster.name parameter, certain workflows could fail such as fetching profiles, this has now been resolved.
+If the name of the cluster where Flux-GUI Enterprise is installed, was changed from the default of management through the config.cluster.name parameter, certain workflows could fail such as fetching profiles, this has now been resolved.
 
 ### Dependency versions​
 weave-gitops v0.12.0
@@ -668,7 +668,7 @@ cluster-bootstrap-controller v0.3.0
 	the syntax for dynamic functions like the [helper functions](../../gitops-templates/supported-langs.mdx#supported-functions-1) we support.
 
 #### Pipelines
-- This [feature](pipelines/pipelines-intro.mdx) is now enabled by default when you install the Weave GitOps Enterprise Helm Chart. You can toggle this with the `enablePipelines` flag.
+- This [feature](pipelines/pipelines-intro.mdx) is now enabled by default when you install the Flux-GUI Enterprise Helm Chart. You can toggle this with the `enablePipelines` flag.
 - GitOpsTemplates are a highly flexible way to create new resources - including Pipelines. We now provide a shortcut on the Pipelines table view to navigate you to Templates with the `weave.works/template-type=pipeline` label.
 
 #### Telemetry
@@ -684,13 +684,13 @@ This release incorporates anonymous aggregate user behavior analytics to help us
 ### Breaking changes
 
 #### GitOpsTemplates and CAPITemplates
-We are making these changes to provide a unified and intuitive self-service experience within Weave GitOps Enterprise, removing misleading and potentially confusing terminology born from when only Clusters were backed by Templates.
+We are making these changes to provide a unified and intuitive self-service experience within Flux-GUI Enterprise, removing misleading and potentially confusing terminology born from when only Clusters were backed by Templates.
 
 **New API Group for the GitOpsTemplate CRD**
 - old: `clustertemplates.weave.works`
 - new: `templates.weave.works`
 
-After upgrading Weave GitOps Enterprise which includes the updated CRD:
+After upgrading Flux-GUI Enterprise which includes the updated CRD:
 1. Update all your GitOpsTemplates in Git changing all occurrences of `apiVersion: clustertemplates.weave.works/v1alpha1` to `apiVersion: templates.weave.works/v1alpha1`.
 2. Commit, push and reconcile. They should now be viewable in the Templates view again.
 3. Clean up the old CRD. As it stands:

@@ -7,8 +7,8 @@ import (
 	. "github.com/onsi/gomega"
 	"k8s.io/apimachinery/pkg/util/rand"
 
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
 )
 
 var _ = Describe("JWT tokens", func() {

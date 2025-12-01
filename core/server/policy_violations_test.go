@@ -9,8 +9,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/client/fake"
 
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 func TestGetViolation(t *testing.T) {

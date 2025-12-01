@@ -4,7 +4,7 @@ Check an OIDC configuration for proper functionality.
 
 ### Synopsis
 
-This command will send the user through an OIDC authorization code flow using the given OIDC configuration. This is helpful for verifying that a given configuration will work properly with Weave GitOps or for debugging issues. Without any provided flags it will read the configuration from a Secret on the cluster.
+This command will send the user through an OIDC authorization code flow using the given OIDC configuration. This is helpful for verifying that a given configuration will work properly with Flux-GUI or for debugging issues. Without any provided flags it will read the configuration from a Secret on the cluster.
 
 NOTE: Make sure to configure your OIDC provider so that it accepts "http://localhost:9876" as redirect URI.
 
@@ -49,12 +49,12 @@ gitops check oidc-config --skip-secret --client-id=CID --client-secret=SEC --iss
 ### Options inherited from parent commands
 
 ```
-  -e, --endpoint WEAVE_GITOPS_ENTERPRISE_API_URL   The Weave GitOps Enterprise HTTP API endpoint can be set with WEAVE_GITOPS_ENTERPRISE_API_URL environment variable
+  -e, --endpoint WEAVE_GITOPS_ENTERPRISE_API_URL   The Flux-GUI Enterprise HTTP API endpoint can be set with WEAVE_GITOPS_ENTERPRISE_API_URL environment variable
       --insecure-skip-tls-verify                   If true, the server's certificate will not be checked for validity. This will make your HTTPS connections insecure
       --kubeconfig string                          Paths to a kubeconfig. Only required if out-of-cluster.
   -n, --namespace string                           The namespace scope for this operation (default "flux-system")
-  -p, --password WEAVE_GITOPS_PASSWORD             The Weave GitOps Enterprise password for authentication can be set with WEAVE_GITOPS_PASSWORD environment variable
-  -u, --username WEAVE_GITOPS_USERNAME             The Weave GitOps Enterprise username for authentication can be set with WEAVE_GITOPS_USERNAME environment variable
+  -p, --password WEAVE_GITOPS_PASSWORD             The Flux-GUI Enterprise password for authentication can be set with WEAVE_GITOPS_PASSWORD environment variable
+  -u, --username WEAVE_GITOPS_USERNAME             The Flux-GUI Enterprise username for authentication can be set with WEAVE_GITOPS_USERNAME environment variable
 ```
 
 ### SEE ALSO

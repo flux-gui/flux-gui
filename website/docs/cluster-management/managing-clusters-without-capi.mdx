@@ -12,7 +12,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 
 # Managing Clusters Without Cluster API <TierLabel tiers="Enterprise" />
 
-You do **not** need Cluster API to add your Kubernetes cluster to Weave GitOps Enterprise. The only thing you need is a secret containing a valid `kubeconfig`.
+You do **not** need Cluster API to add your Kubernetes cluster to Flux-GUI Enterprise. The only thing you need is a secret containing a valid `kubeconfig`.
 
 import TOCInline from "@theme/TOCInline";
 
@@ -278,7 +278,7 @@ spec:
     name: demo-01-kubeconfig
 ```
 
-To use the Weave GitOps Enterprise user interface (UI) to inspect the Applications and Sources running on the new cluster, you'll need permissions. We took care of this above when we stored your RBAC rules in `./clusters/bases`. In the following step, we'll create a kustomization to add these common resources onto our new cluster:
+To use the Flux-GUI Enterprise user interface (UI) to inspect the Applications and Sources running on the new cluster, you'll need permissions. We took care of this above when we stored your RBAC rules in `./clusters/bases`. In the following step, we'll create a kustomization to add these common resources onto our new cluster:
 
 ```yaml title="./clusters/demo-01/clusters-bases-kustomization.yaml"
 apiVersion: kustomize.toolkit.fluxcd.io/v1

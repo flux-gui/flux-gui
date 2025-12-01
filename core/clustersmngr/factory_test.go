@@ -8,16 +8,16 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster/clusterfakes"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/clustersmngrfakes"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/fetcher"
-	"github.com/weaveworks/weave-gitops/core/nsaccess"
-	"github.com/weaveworks/weave-gitops/core/nsaccess/nsaccessfakes"
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster/clusterfakes"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/clustersmngrfakes"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/fetcher"
+	"github.com/flux-gui/flux-gui/core/nsaccess"
+	"github.com/flux-gui/flux-gui/core/nsaccess/nsaccessfakes"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 func TestGetImpersonatedClient(t *testing.T) {

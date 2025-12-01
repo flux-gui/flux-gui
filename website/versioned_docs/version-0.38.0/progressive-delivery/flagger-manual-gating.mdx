@@ -9,7 +9,7 @@ import TierLabel from "../_components/TierLabel";
   {frontMatter.title} <TierLabel tiers="Enterprise" />
 </h1>
 
-To help you understand the state of progressive delivery updates to your applications, Weave GitOps Enterprise uses [Flagger](https://flagger.app)—part of the Flux family of open source projects. WGE's Delivery view shows all of your deployed `Canary` objects and rollout progress.
+To help you understand the state of progressive delivery updates to your applications, Flux-GUI Enterprise uses [Flagger](https://flagger.app)—part of the Flux family of open source projects. WGE's Delivery view shows all of your deployed `Canary` objects and rollout progress.
 
 By default, Flagger automatically promotes a new version of an application whenever it passes the defined checks of an analysis phase. However, you can also configure [webhooks](https://docs.flagger.app/usage/webhooks) to enable manual approvals of rollout stages.
 
@@ -82,7 +82,7 @@ Trigger a Canary rollout by updating your target deployment/daemonset—for
 example, by bumping the container image tag. A full list of ways to trigger 
 a rollout is available [here](https://docs.flagger.app/faq#how-to-retry-a-failed-release).
 
-Weave GitOps Enterprise (WGE)'s Applications > Delivery view enables you to watch the progression of a canary:
+Flux-GUI Enterprise (WGE)'s Applications > Delivery view enables you to watch the progression of a canary:
 
 ![Podinfo Canary progressing](/img/pd-table-progressing.png)
 

@@ -31,7 +31,7 @@
         "installation/weave-gitops",
         {
           "type": "category",
-          "label": "Weave GitOps Enterprise",
+          "label": "Flux-GUI Enterprise",
           "link": {
             "type": "doc",
             "id": "installation/weave-gitops-enterprise/index"

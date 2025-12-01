@@ -83,7 +83,7 @@ describe("graph lib", () => {
   });
   describe("deterministic graph", () => {
     let client;
-    // https://github.com/weaveworks/weave-gitops/issues/3302
+    // https://github.com/flux-gui/flux-gui/issues/3302
     // Make sure the graph nodes don't "hop around" when the server returns objects in a new order
     beforeEach(() => {
       client = createCoreMockClient({
@@ -124,7 +124,7 @@ describe("graph lib", () => {
       });
     });
     it("returns children in the same order every time", async () => {
-      // https://github.com/weaveworks/weave-gitops/issues/3302
+      // https://github.com/flux-gui/flux-gui/issues/3302
       const objects = await getChildren(
         client,
         app.name,

@@ -1,7 +1,7 @@
 {
-  "name": "@weaveworks/weave-gitops",
+  "name": "@flux-gui/flux-gui",
   "version": "0.39.0-rc.2",
-  "description": "Weave GitOps core",
+  "description": "Flux GUI core",
   "targets": {
     "default": {
       "distDir": "bin/dist",
@@ -36,12 +36,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/weaveworks/weave-gitops.git"
+    "url": "git://github.com/flux-gui/flux-gui.git"
   },
   "bugs": {
-    "url": "https://github.com/weaveworks/weave-gitops/issues"
+    "url": "https://github.com/flux-gui/flux-gui/issues"
   },
-  "homepage": "https://github.com/weaveworks/weave-gitops#readme",
+  "homepage": "https://github.com/flux-gui/flux-gui#readme",
   "peerDependencies": {
     "lodash": "^4.17.21",
     "react": "^19.0.0",

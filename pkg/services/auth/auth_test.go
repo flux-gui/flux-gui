@@ -10,12 +10,12 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/rand"
 
-	"github.com/weaveworks/weave-gitops/pkg/flux"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders/gitprovidersfakes"
-	"github.com/weaveworks/weave-gitops/pkg/names"
-	"github.com/weaveworks/weave-gitops/pkg/runner"
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/pkg/flux"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders/gitprovidersfakes"
+	"github.com/flux-gui/flux-gui/pkg/names"
+	"github.com/flux-gui/flux-gui/pkg/runner"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
 )
 
 var _ = Describe("auth", func() {

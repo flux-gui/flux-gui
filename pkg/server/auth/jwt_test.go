@@ -17,8 +17,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	. "github.com/onsi/gomega"
 
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
-	"github.com/weaveworks/weave-gitops/pkg/testutils"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/testutils"
 )
 
 func TestJWTCookiePrincipalGetter(t *testing.T) {

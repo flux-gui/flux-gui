@@ -13,7 +13,7 @@ import (
 	"github.com/coreos/go-oidc/v3/oidc"
 	"golang.org/x/oauth2"
 
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 //go:embed success.html

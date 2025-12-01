@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/fluxcd/go-git-providers/gitprovider"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
 )
 
 type FakeGitProvider struct {

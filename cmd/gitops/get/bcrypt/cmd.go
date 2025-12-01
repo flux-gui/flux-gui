@@ -9,7 +9,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"golang.org/x/term"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/cmd/gitops/config"
 )
 
 func HashCommand(opts *config.Options) *cobra.Command {

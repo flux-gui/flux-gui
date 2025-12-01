@@ -17,8 +17,8 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	ctrlclient "sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/core/logger"
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/core/logger"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
 )
 
 const (

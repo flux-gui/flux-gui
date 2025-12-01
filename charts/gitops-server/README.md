@@ -1,6 +1,6 @@
 # Weave Gitops Helm Chart
 
-This is the [Weave Gitops](https://github.com/weaveworks/weave-gitops) [Helm](https://helm.sh) chart.
+This is the [Weave Gitops](https://github.com/flux-gui/flux-gui) [Helm](https://helm.sh) chart.
 
 It installs the weave-gitops-server component as a 1-replica deployment.
 

@@ -16,7 +16,7 @@ Useful terms used in this guide:
 
 - `Flux Beta or Flux v0.x` as the [latest Flux Beta Release](https://github.com/fluxcd/flux2/releases/tag/v0.41.2).
 - `Flux GA` as the [latest Flux GA Release Candidate](https://github.com/fluxcd/flux2/releases/tag/v2.0.0-rc.3)
-- `Weave GitOps` as the [latest Weave GitOps Enterprise release](https://github.com/weaveworks/weave-gitops-enterprise/releases/latest)
+- `Flux-GUI` as the [latest Flux-GUI Enterprise release](https://github.com/flux-gui/flux-gui-enterprise/releases/latest)
 
 ## FAQ
 
@@ -27,13 +27,13 @@ Here you can find the most common questions around upgrading.
 Although Flux Beta APIs have been stable and used in production for quite some time, Flux GA is the main supported API version for new features and development. Features like [horizontal scaling](https://fluxcd.io/flux/cheatsheets/sharding/)
 are only available in Flux GA. Also, beta APIs will be removed after six months.
 
-### Can I Use Weave GitOps with Flux GA?
+### Can I Use Flux-GUI with Flux GA?
 
-Yes. This has been possible since Weave Gitops v0.22.0. Use the [latest available release](https://github.com/weaveworks/weave-gitops/releases) for the best experience.
+Yes. This has been possible since Weave Gitops v0.22.0. Use the [latest available release](https://github.com/flux-gui/flux-gui/releases) for the best experience.
 
-### Can I Use Weave GitOps Enterprise with Flux GA?
+### Can I Use Flux-GUI Enterprise with Flux GA?
 
-Yes. This has been possible since Weave GitOps Enterprise v0.22.0. Use the [latest available release](https://docs.gitops.weaveworks.org/docs/enterprise/getting-started/releases-enterprise/) for the best experience.
+Yes. This has been possible since Flux-GUI Enterprise v0.22.0. Use the [latest available release](https://docs.gitops.weaveworks.org/docs/enterprise/getting-started/releases-enterprise/) for the best experience.
 
 The following limitations are knowns by version:
 
@@ -44,7 +44,7 @@ No limitations
 #### v0.22.0
 
 If you are using GitOpsSets, upgrade that component to v0.10.0 for Flux GA compatibility.
-Update the Weave GitOps Enterprise HelmRelease values to use the new version.
+Update the Flux-GUI Enterprise HelmRelease values to use the new version.
 
 ```yaml
 gitopssets-controller:
@@ -54,11 +54,11 @@ gitopssets-controller:
         tag: v0.10.0
 ```
 
-### Can I Use Weave GitOps with Flux v2 0.x (pre-GA versions)?
+### Can I Use Flux-GUI with Flux v2 0.x (pre-GA versions)?
 
-As of Weave GitOps v0.29, only Flux v2.0 GA is supported. Please follow the [Upgrade](#upgrade) section to help you with the process.
+As of Flux-GUI v0.29, only Flux v2.0 GA is supported. Please follow the [Upgrade](#upgrade) section to help you with the process.
 
-Earlier versions of Weave GitOps work with both Flux v2 GA and Flux v2 0.x (the pre-GA ones), but it is encouraged that you upgrade to the latest version for the best experience.
+Earlier versions of Flux-GUI work with both Flux v2 GA and Flux v2 0.x (the pre-GA ones), but it is encouraged that you upgrade to the latest version for the best experience.
 
 ## Upgrade
 
@@ -77,7 +77,7 @@ in a working state, so you can take your time to complete the migration.
 
 1. Upgrade to Flux GA on your existing leaf clusters and management clusters
 2. Upgrade to Flux GA in `ClusterBootstrapConfig`s.
-3. Upgrade to [latest Weave GitOps](https://docs.gitops.weaveworks.org/docs/enterprise/getting-started/releases-enterprise/).
+3. Upgrade to [latest Flux-GUI](https://docs.gitops.weaveworks.org/docs/enterprise/getting-started/releases-enterprise/).
 4. Upgrade GitopsTemplates, GitopsSets and ClusterBootstrapConfigs.
 
 ### 1. Upgrade to Flux GA on your existing leaf clusters and management clusters
@@ -134,7 +134,7 @@ At this stage, your new bootstrapped clusters will run Flux GA.
 
 Use your regular WGE upgrade procedure to bring it to the [latest version](https://docs.gitops.weaveworks.org/docs/enterprise/getting-started/releases-enterprise/)
 
-At this stage you have Weave GitOps running Flux GA.
+At this stage you have Flux-GUI running Flux GA.
 
 ### 4. Upgrade GitOpsTemplates, GitOpsSets, and ClusterBootstrapConfigs
 

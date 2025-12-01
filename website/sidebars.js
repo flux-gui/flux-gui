@@ -13,7 +13,7 @@ module.exports = {
   docs: [
     {
       type: "category",
-      label: "Introducing Weave GitOps",
+      label: "Introducing Flux-GUI",
       collapsed: false,
       link: {
         type: "doc",
@@ -22,7 +22,7 @@ module.exports = {
       items: [
         {
           type: "category",
-          label: "Weave GitOps Open Source",
+          label: "Flux-GUI Open Source",
           collapsed: false,
           items: [
             "open-source/getting-started/install-OSS",
@@ -33,7 +33,7 @@ module.exports = {
         },
         {
           type: "category",
-          label: "Weave GitOps Enterprise",
+          label: "Flux-GUI Enterprise",
           link: {
             type: "doc",
             id: "enterprise/getting-started/intro-enterprise",

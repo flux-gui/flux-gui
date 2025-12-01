@@ -6,35 +6,35 @@
 > We're transitioning the project to be maintained independently under the "Flux GUI" name.
 > See `COMMUNITY.md` for governance, contribution guidelines, and communication channels.
 
-![Test status](https://github.com/weaveworks/weave-gitops/actions/workflows/pr.yaml/badge.svg)
-[![LICENSE](https://img.shields.io/github/license/weaveworks/weave-gitops)](https://github.com/weaveworks/weave-gitops/blob/master/LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/weaveworks/weave-gitops)](https://github.com/weaveworks/weave-gitops/graphs/contributors)
-[![Release](https://img.shields.io/github/v/release/weaveworks/weave-gitops?include_prereleases)](https://github.com/weaveworks/weave-gitops/releases/latest)
+![Test status](https://github.com/flux-gui/flux-gui/actions/workflows/pr.yaml/badge.svg)
+[![LICENSE](https://img.shields.io/github/license/weaveworks/weave-gitops)](https://github.com/flux-gui/flux-gui/blob/master/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/weaveworks/weave-gitops)](https://github.com/flux-gui/flux-gui/graphs/contributors)
+[![Release](https://img.shields.io/github/v/release/weaveworks/weave-gitops?include_prereleases)](https://github.com/flux-gui/flux-gui/releases/latest)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fweaveworks%2Fweave-gitops.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fweaveworks%2Fweave-gitops?ref=badge_shield&issueType=license)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fweaveworks%2Fweave-gitops.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Fweaveworks%2Fweave-gitops?ref=badge_shield&issueType=security)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/7820/badge)](https://www.bestpractices.dev/projects/7820)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/weaveworks/weave-gitops/badge)](https://scorecard.dev/viewer/?uri=github.com/weaveworks/weave-gitops)
-[![Go Report Card](https://goreportcard.com/badge/github.com/weaveworks/weave-gitops)](https://goreportcard.com/report/github.com/weaveworks/weave-gitops)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/flux-gui/flux-gui/badge)](https://scorecard.dev/viewer/?uri=github.com/flux-gui/flux-gui)
+[![Go Report Card](https://goreportcard.com/badge/github.com/flux-gui/flux-gui)](https://goreportcard.com/report/github.com/flux-gui/flux-gui)
 
-Weave GitOps is a simple, open source developer platform for people who want cloud native applications but who don't have
+Flux-GUI is a simple, open source developer platform for people who want cloud native applications but who don't have
 Kubernetes expertise. Experience how easy it is to enable GitOps and run your apps in a cluster. Use Git to collaborate
 with team members making new deployments easy and secure. Start with what developers need to run apps, and then easily
 extend to define and run your own enterprise platform.
 
-From Kubernetes run Weave GitOps to get:
+From Kubernetes run Flux-GUI to get:
 
 1. Application Operations: manage and automate deployment pipelines for apps and more
 2. Platforms: the easy way to have your own custom PaaS on cloud or on premise
 3. Extensions: coordinate Kubernetes rollouts with eg. VMs, databases, and cloud services
 
 Our vision is that all cloud native applications should be easy for developers, and that operations should be
-automated and secure. Weave GitOps is a highly extensible tool to achieve this by placing Kubernetes and GitOps at the
+automated and secure. Flux-GUI is a highly extensible tool to achieve this by placing Kubernetes and GitOps at the
 core and building a platform around that.
 
-Weave GitOps defaults are [Flux](https://fluxcd.io/flux/) as the GitOps engine, Kustomize, Helm, Sops, and Kubernetes CAPI. If you use Flux already, then you can easily add Weave GitOps to create a platform management overlay.
+Flux-GUI defaults are [Flux](https://fluxcd.io/flux/) as the GitOps engine, Kustomize, Helm, Sops, and Kubernetes CAPI. If you use Flux already, then you can easily add Flux-GUI to create a platform management overlay.
 
-Weave GitOps Open Source provides:
+Flux-GUI Open Source provides:
 
 - Continuous Delivery through GitOps for apps and infrastructure.
 - Support for GitHub, GitLab, and Bitbucket; S3-compatible buckets as a source; all major container registries; and all CI workflow providers.
@@ -76,7 +76,7 @@ Mac / Linux
 <!-- x-release-please-start-version -->
 
 ```console
-curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/download/v0.39.0-rc.2/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
+curl --silent --location "https://github.com/flux-gui/flux-gui/releases/download/v0.39.0-rc.2/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
 sudo mv /tmp/gitops /usr/local/bin
 gitops version
 ```
@@ -117,18 +117,18 @@ Available Commands:
   check       Validates flux compatibility
   completion  Generate the autocompletion script for the specified shell
   create      Creates a resource
-  get         Display one or many Weave GitOps resources
+  get         Display one or many Flux-GUI resources
   help        Help about any command
   version     Display gitops version
 
 Flags:
-  -e, --endpoint WEAVE_GITOPS_ENTERPRISE_API_URL   The Weave GitOps Enterprise HTTP API endpoint can be set with WEAVE_GITOPS_ENTERPRISE_API_URL environment variable
+  -e, --endpoint WEAVE_GITOPS_ENTERPRISE_API_URL   The Flux-GUI Enterprise HTTP API endpoint can be set with WEAVE_GITOPS_ENTERPRISE_API_URL environment variable
   -h, --help                                       help for gitops
       --insecure-skip-tls-verify                   If true, the server's certificate will not be checked for validity. This will make your HTTPS connections insecure
       --kubeconfig string                          Paths to a kubeconfig. Only required if out-of-cluster.
       --namespace string                           The namespace scope for this operation (default "flux-system")
-  -p, --password WEAVE_GITOPS_PASSWORD             The Weave GitOps Enterprise password for authentication can be set with WEAVE_GITOPS_PASSWORD environment variable
-  -u, --username WEAVE_GITOPS_USERNAME             The Weave GitOps Enterprise username for authentication can be set with WEAVE_GITOPS_USERNAME environment variable
+  -p, --password WEAVE_GITOPS_PASSWORD             The Flux-GUI Enterprise password for authentication can be set with WEAVE_GITOPS_PASSWORD environment variable
+  -u, --username WEAVE_GITOPS_USERNAME             The Flux-GUI Enterprise username for authentication can be set with WEAVE_GITOPS_USERNAME environment variable
 
 Use "gitops [command] --help" for more information about a command.
 ```
@@ -137,7 +137,7 @@ For more information please see the [docs](https://docs.gitops.weaveworks.org/do
 
 ## FAQ
 
-Please see our Weave GitOps OSS [FAQ](https://www.weaveworks.org/faqs-for-weave-gitops)
+Please see our Flux-GUI OSS [FAQ](https://www.weaveworks.org/faqs-for-weave-gitops)
 
 ## Contribution
 

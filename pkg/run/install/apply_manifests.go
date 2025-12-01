@@ -14,7 +14,7 @@ import (
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	ctrlclient "sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 type ResourceManagerForApply interface {

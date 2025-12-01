@@ -1,4 +1,4 @@
-# 7. Embedding Weave GitOps Core
+# 7. Embedding Flux-GUI Core
 
 Date: 2021-08-12
 
@@ -8,15 +8,15 @@ Accepted
 
 ## Problem
 
-We want to be able to use the Weave GitOps Core UI elements and support services in other projects. These projects might be other editions of Weave GitOps, or other third-party environments.
+We want to be able to use the Flux-GUI Core UI elements and support services in other projects. These projects might be other editions of Flux-GUI, or other third-party environments.
 
-Weave GitOps will need to be designed in such as way as to support this type of installation, and provide the necessary facilities to make embedding the UI as simple as possible.
+Flux-GUI will need to be designed in such as way as to support this type of installation, and provide the necessary facilities to make embedding the UI as simple as possible.
 
 ## Design
 
 ### WeGo Core UI as a library
 
-The Weave GitOps Core repository will contain an `index.js` file that will define the public API for including WeGO UI components in other projects. That file might look something like this:
+The Flux-GUI Core repository will contain an `index.js` file that will define the public API for including WeGO UI components in other projects. That file might look something like this:
 
 ```javascript
 import _Timestamp from "./components/Timestamp.tsx";
@@ -36,7 +36,7 @@ export const applicationsClient = appsClient;
 
 From this file, a library bundle will be generated. This bundle will contain transpiled code that can be directly imported into another project. The contents of this bundle are not meant to be human-readable, as it will be translated from TypeScript into a browser-friendly version of JS. Additionally, the bundle will also contain a typescript definitions file so that consumers of this bundle can have a smoother developer experience.
 
-This bundle will be stored as a public GitHub Package. This will allow us to associate a package version with a source code release. These packages will be built during CI and ONLY as part of a Weave GitOps release.
+This bundle will be stored as a public GitHub Package. This will allow us to associate a package version with a source code release. These packages will be built during CI and ONLY as part of a Flux-GUI release.
 
 We are making a deliberate choice NOT to use the global NPM registry, as it would require a separate authentication step with NPM.org in order to push new versions of the package. Installing an NPM package from GitHub packages will require users to create an `.npmrc` file with the following entry (from the GitHub packages docs):
 
@@ -152,7 +152,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/weaveworks/weave-gitops/pkg/server"
+	"github.com/flux-gui/flux-gui/pkg/server"
 )
 
 var addr = "0.0.0.0:8000"

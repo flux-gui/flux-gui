@@ -6,9 +6,9 @@ import (
 
 	"k8s.io/client-go/rest"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/testutils"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/testutils"
 )
 
 var k8sEnv *testutils.K8sTestEnv

@@ -13,8 +13,8 @@ import (
 	"github.com/sethvargo/go-limiter/httplimit"
 	"github.com/sethvargo/go-limiter/memorystore"
 
-	"github.com/weaveworks/weave-gitops/core/logger"
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/core/logger"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
 )
 
 const (

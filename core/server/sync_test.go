@@ -19,9 +19,9 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/core/fluxsync"
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	"github.com/flux-gui/flux-gui/core/fluxsync"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 func TestSync(t *testing.T) {

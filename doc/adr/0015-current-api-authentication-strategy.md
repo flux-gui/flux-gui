@@ -27,7 +27,7 @@ The 'decision' section has been skipped as the decisions have been made and reve
 
 This ADR deals with [autheNtication, not authoriZation](https://www.cloudflare.com/en-gb/learning/access-management/authn-vs-authz/), responsibility for authZ is handed off to Kubernetes.
 
-Since ADR-0005 was accepted there have been several changes to Weave GitOps. The largest of these has been the removal of support for making changes to git repositories and a greater use of `impersonation` for authentication to the Kubernetes API.
+Since ADR-0005 was accepted there have been several changes to Flux-GUI. The largest of these has been the removal of support for making changes to git repositories and a greater use of `impersonation` for authentication to the Kubernetes API.
 
 ADR-0005 lists 3 authN/Z 'back ends':
 * The Git repo (e.g. weave-gitops)

@@ -6,8 +6,8 @@ import (
 
 	"github.com/hashicorp/go-multierror"
 
-	"github.com/weaveworks/weave-gitops/pkg/fluxinstall/errors"
-	"github.com/weaveworks/weave-gitops/pkg/fluxinstall/src"
+	"github.com/flux-gui/flux-gui/pkg/fluxinstall/errors"
+	"github.com/flux-gui/flux-gui/pkg/fluxinstall/src"
 )
 
 type Installer struct {

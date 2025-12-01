@@ -27,7 +27,7 @@ func NewFlux(workingDir, execPath string) (*Flux, error) {
 	}
 
 	if execPath == "" {
-		err := fmt.Errorf("please supply the path to a Flux executable using execPath, e.g. using the github.com/weaveworks/weave-gitops/pkg/flux-install module")
+		err := fmt.Errorf("please supply the path to a Flux executable using execPath, e.g. using the github.com/flux-gui/flux-gui/pkg/flux-install module")
 
 		return nil, &ErrNoSuitableBinary{
 			err: err,

@@ -8,7 +8,7 @@ import CodeBlock from "@theme/CodeBlock";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 
 # Getting Started <TierLabel tiers="Enterprise" />
-Enabling the Weave Policy Engine features in Weave GitOps is done by running the policy agent on the cluster. This section gives an overview of the policy ecosystem and the steps required for installing and running the policy agent on leaf clusters.
+Enabling the Weave Policy Engine features in Flux-GUI is done by running the policy agent on the cluster. This section gives an overview of the policy ecosystem and the steps required for installing and running the policy agent on leaf clusters.
 
 ## The Policy Ecosystem
 
@@ -20,8 +20,8 @@ There are two other optional components: the [PolicySet](./policy-set.mdx), and 
 
 ## Installation Pre-requisites
 
-### Weave GitOps
-You need to have a running instance of Weave GitOps with at least one CAPI provider installed to provision Kubernetes clusters. See [Weave GitOps Installation](https://docs.gitops.weaveworks.org/docs/installation/) page for more details about installing Weave GitOps.
+### Flux-GUI
+You need to have a running instance of Flux-GUI with at least one CAPI provider installed to provision Kubernetes clusters. See [Flux-GUI Installation](https://docs.gitops.weaveworks.org/docs/installation/) page for more details about installing Flux-GUI.
 
 ### Policy Library
 For the policy agent to work, it will need a source for the [policies](./policy.mdx) that it will enforce in the cluster. Enterprise customers should request access to fork our policy library into their local repositories. Our policy library includes an extensive list of policy CRs that cover a multitude of security and compliance benchmarks.
@@ -63,7 +63,7 @@ policySource:
 You can find more about other policy profile configurations [here](../weave-policy-profile/).
 
 ## Policies in UI
-After the leaf cluster is provisioned and the profile is installed, you should now see the policies listed in the Policies tab in Weave GitOps UI.
+After the leaf cluster is provisioned and the profile is installed, you should now see the policies listed in the Policies tab in Flux-GUI UI.
 
 ![Policies](./img/weave-policies.png)
 
@@ -109,7 +109,7 @@ spec:
 Once you apply it, the policy agent will deny this request and show a violation message, and accordingly the deployment will not be created.
 
 ## Violations Logs in UI
-You can go to the `Violations Log` in Weave GitOps UI to view the policy violations of all the connected clusters, and dive into the details of each violation.
+You can go to the `Violations Log` in Flux-GUI UI to view the policy violations of all the connected clusters, and dive into the details of each violation.
 
 This view shows only the violations resulting from the [admission](./weave-policy-profile.mdx#admission) mode by configuring the [events sink](weave-policy-profile.mdx#policy-validation-sinks).
 

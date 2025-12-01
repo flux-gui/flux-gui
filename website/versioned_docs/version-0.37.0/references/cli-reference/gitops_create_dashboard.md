@@ -1,10 +1,10 @@
 ## gitops create dashboard
 
-Create a HelmRepository and HelmRelease to deploy Weave GitOps
+Create a HelmRepository and HelmRelease to deploy Flux-GUI
 
 ### Synopsis
 
-Create a HelmRepository and HelmRelease to deploy Weave GitOps
+Create a HelmRepository and HelmRelease to deploy Flux-GUI
 
 ```
 gitops create dashboard [flags]
@@ -14,7 +14,7 @@ gitops create dashboard [flags]
 
 ```
 
-# Create a HelmRepository and HelmRelease to deploy Weave GitOps
+# Create a HelmRepository and HelmRelease to deploy Flux-GUI
 gitops create dashboard ww-gitops \
   --password=$PASSWORD \
   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml
@@ -35,7 +35,7 @@ gitops create dashboard ww-gitops \
 ### Options inherited from parent commands
 
 ```
-  -e, --endpoint WEAVE_GITOPS_ENTERPRISE_API_URL   The Weave GitOps Enterprise HTTP API endpoint can be set with WEAVE_GITOPS_ENTERPRISE_API_URL environment variable
+  -e, --endpoint WEAVE_GITOPS_ENTERPRISE_API_URL   The Flux-GUI Enterprise HTTP API endpoint can be set with WEAVE_GITOPS_ENTERPRISE_API_URL environment variable
       --export                                     Export in YAML format to stdout.
       --insecure-skip-tls-verify                   If true, the server's certificate will not be checked for validity. This will make your HTTPS connections insecure
       --kubeconfig string                          Paths to a kubeconfig. Only required if out-of-cluster.

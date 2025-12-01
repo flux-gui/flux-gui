@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/create/dashboard"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/create/terraform"
+	"github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/cmd/gitops/create/dashboard"
+	"github.com/flux-gui/flux-gui/cmd/gitops/create/terraform"
 )
 
 type CreateCommandFlags struct {
@@ -22,7 +22,7 @@ func GetCommand(opts *config.Options) *cobra.Command {
 		Use:   "create",
 		Short: "Creates a resource",
 		Example: `
-# Create a HelmRepository and HelmRelease to deploy Weave GitOps
+# Create a HelmRepository and HelmRelease to deploy Flux-GUI
 gitops create dashboard ww-gitops \
   --password=$PASSWORD \
   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml

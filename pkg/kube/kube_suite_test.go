@@ -7,7 +7,7 @@ import (
 	. "github.com/onsi/gomega"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/pkg/testutils"
+	"github.com/flux-gui/flux-gui/pkg/testutils"
 )
 
 var (

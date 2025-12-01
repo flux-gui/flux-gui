@@ -24,8 +24,8 @@ import (
 	ctrlclient "sigs.k8s.io/controller-runtime/pkg/client"
 	ctrlclientfake "sigs.k8s.io/controller-runtime/pkg/client/fake"
 
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 // A custom client that doesn't automatically follow redirects

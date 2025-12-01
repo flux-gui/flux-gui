@@ -14,7 +14,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
   {frontMatter.title} <TierLabel tiers="Enterprise" />
 </h1>
 
-Weave GitOps Enterprise can leverage [Cluster API](https://cluster-api.sigs.k8s.io/introduction.html) providers to enable leaf cluster creation. Cluster API provides declarative APIs, controllers, and tooling to manage the lifecycle of Kubernetes clusters across a large number of [infrastructure providers](https://cluster-api.sigs.k8s.io/reference/providers.html#infrastructure). Cluster API custom resource definitions (CRDs) are platform-independent as each provider implementation handles the creation of virtual machines, VPCs, networks, and other required infrastructure parts—enabling consistent and repeatable cluster deployments.
+Flux-GUI Enterprise can leverage [Cluster API](https://cluster-api.sigs.k8s.io/introduction.html) providers to enable leaf cluster creation. Cluster API provides declarative APIs, controllers, and tooling to manage the lifecycle of Kubernetes clusters across a large number of [infrastructure providers](https://cluster-api.sigs.k8s.io/reference/providers.html#infrastructure). Cluster API custom resource definitions (CRDs) are platform-independent as each provider implementation handles the creation of virtual machines, VPCs, networks, and other required infrastructure parts—enabling consistent and repeatable cluster deployments.
 
 As an AWS advanced technology partner, Weaveworks has been working tirelessly to ensure that deploying EKS **anywhere** is smooth and removes the barriers to application modernization.
 
@@ -28,13 +28,13 @@ You'll need to install the following software before continuing with these instr
 - the AWS Command Line Interface/`aws cli` [(source)](https://aws.amazon.com/cli/)
 - `clusterctl` >= v1.1.3 [(source)](https://github.com/kubernetes-sigs/cluster-api/releases); follow [these steps](https://cluster-api-aws.sigs.k8s.io/getting-started.html#install-clusterctl) to initialise the cluster and enable feature gates
 - `clusterawsadm` >= v1.1.0, following [Cluster API's instructions](https://github.com/kubernetes-sigs/cluster-api-provider-aws/releases)
-- Make sure you have a management cluster. If you followed the Weave GitOps Enterprise [installation guide](../enterprise/getting-started/install-enterprise.mdx), you'll have done this already.
+- Make sure you have a management cluster. If you followed the Flux-GUI Enterprise [installation guide](../enterprise/getting-started/install-enterprise.mdx), you'll have done this already.
 - Configure your `AWS_ACCESS_KEY_ID`and `AWS_SECRET_ACCESS_KEY` with either `aws configure` or by exporting it in the current shell.
 - Set the `GITHUB_TOKEN` as an environment variable in the current shell. It should have permissions to create Pull Requests against the cluster config repo.
 
 ## Multitenancy
 
-Some Cluster API providers allow you to choose the account or identity that the new cluster will be created with. This is often referred to as _Multi-tenancy_ in the CAPI world. Weave GitOps currently supports:
+Some Cluster API providers allow you to choose the account or identity that the new cluster will be created with. This is often referred to as _Multi-tenancy_ in the CAPI world. Flux-GUI currently supports:
 
 - [**AWS** multi-tenancy](https://cluster-api-aws.sigs.k8s.io/topics/multitenancy.html)
 - [**Azure** multi-tenancy](https://capz.sigs.k8s.io/topics/multitenancy.html)
@@ -140,7 +140,7 @@ Then update the `GITOPS_REPO` variable to point to your cluster
 
 </details>
 
-## 4. Delete a Cluster with the Weave GitOps Enterprise UI
+## 4. Delete a Cluster with the Flux-GUI Enterprise UI
 
 Here are the steps:
 - Select the clusters you want to delete
@@ -157,7 +157,7 @@ A workaround is to add a dummy _ConfigMap_ back to the Git repository after dele
 If you do not need CAPI-based cluster management support, you can disable CAPI
 via the Helm Chart values.
 
-Update your Weave GitOps Enterprise `HelmRelease` object with the
+Update your Flux-GUI Enterprise `HelmRelease` object with the
 `global.capiEnabled` value set to `false`:
 
 ```yaml {33-35} title='clusters/management/weave-gitops-enterprise.yaml'

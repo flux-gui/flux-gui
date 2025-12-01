@@ -42,20 +42,20 @@ describe("utils lib", () => {
         ),
       ).toEqual(true);
       expect(
-        isHTTP("http://github.com/weaveworks/weave-gitops-clusters"),
+        isHTTP("http://github.com/flux-gui/flux-gui-clusters"),
       ).toEqual(true);
       expect(
-        isHTTP("http://github.com/weaveworks/weave-gitops-clusters/"),
+        isHTTP("http://github.com/flux-gui/flux-gui-clusters/"),
       ).toEqual(true);
     });
     it("detects HTTPS", () => {
       expect(isHTTP("https://www.google.com")).toEqual(true);
       expect(isHTTP("https://www.google.com/")).toEqual(true);
       expect(
-        isHTTP("https://github.com/weaveworks/weave-gitops-clusters"),
+        isHTTP("https://github.com/flux-gui/flux-gui-clusters"),
       ).toEqual(true);
       expect(
-        isHTTP("https://github.com/weaveworks/weave-gitops-clusters/"),
+        isHTTP("https://github.com/flux-gui/flux-gui-clusters/"),
       ).toEqual(true);
     });
     it("detects non-HTTP string", () => {
@@ -68,9 +68,9 @@ describe("utils lib", () => {
       expect(isHTTP("http:// this is a random http sentence")).toEqual(false);
       expect(isHTTP("https:// this is a random https sentence")).toEqual(false);
       expect(
-        isHTTP("ssh://git@github.com/weaveworks/weave-gitops-clusters"),
+        isHTTP("ssh://git@github.com/flux-gui/flux-gui-clusters"),
       ).toEqual(false);
-      expect(isHTTP("github.com/weaveworks/weave-gitops-clusters")).toEqual(
+      expect(isHTTP("github.com/flux-gui/flux-gui-clusters")).toEqual(
         false,
       );
       expect(isHTTP("foo/file.html")).toEqual(false);
@@ -96,7 +96,7 @@ describe("utils lib", () => {
       expect(isAllowedLink("/hello")).toEqual(true);
       expect(isAllowedLink("test string")).toEqual(true);
       expect(
-        isAllowedLink("github.com/weaveworks/weave-gitops-clusters"),
+        isAllowedLink("github.com/flux-gui/flux-gui-clusters"),
       ).toEqual(true);
       expect(isAllowedLink("foo/file.html")).toEqual(true);
       expect(isAllowedLink("//.com")).toEqual(true);
@@ -107,7 +107,7 @@ describe("utils lib", () => {
       expect(isAllowedLink("smtp://http/")).toEqual(false);
       expect(isAllowedLink("smtp://https/")).toEqual(false);
       expect(
-        isAllowedLink("ssh://git@github.com/weaveworks/weave-gitops-clusters"),
+        isAllowedLink("ssh://git@github.com/flux-gui/flux-gui-clusters"),
       ).toEqual(false);
     });
   });
@@ -115,21 +115,21 @@ describe("utils lib", () => {
     it("converts valid Git URL", () => {
       expect(
         convertGitURLToGitProvider(
-          "ssh://git@github.com/weaveworks/weave-gitops-clusters",
+          "ssh://git@github.com/flux-gui/flux-gui-clusters",
         ),
-      ).toEqual("https://github.com/weaveworks/weave-gitops-clusters");
+      ).toEqual("https://github.com/flux-gui/flux-gui-clusters");
     });
     it("returns nothing on invalid Git URL", () => {
-      const uri = "github.com/weaveworks/weave-gitops-clusters";
+      const uri = "github.com/flux-gui/flux-gui-clusters";
 
       expect(convertGitURLToGitProvider(uri)).toEqual("");
     });
     it("returns the original HTTP URL", () => {
       expect(
         convertGitURLToGitProvider(
-          "https://github.com/weaveworks/weave-gitops-clusters",
+          "https://github.com/flux-gui/flux-gui-clusters",
         ),
-      ).toEqual("https://github.com/weaveworks/weave-gitops-clusters");
+      ).toEqual("https://github.com/flux-gui/flux-gui-clusters");
     });
   });
   describe("pageTitleWithAppName", () => {
@@ -352,7 +352,7 @@ describe("utils lib", () => {
 
       expect(appVersion.versionText).toEqual(`vdefault version`);
       expect(appVersion.versionHref).toEqual(
-        "https://github.com/weaveworks/weave-gitops/releases/tag/vdefault version",
+        "https://github.com/flux-gui/flux-gui/releases/tag/vdefault version",
       );
     });
     it("should return api version for full response if not loading data", () => {
@@ -365,7 +365,7 @@ describe("utils lib", () => {
 
       expect(appVersion.versionText).toEqual("branch-commit");
       expect(appVersion.versionHref).toEqual(
-        "https://github.com/weaveworks/weave-gitops/commit/commit",
+        "https://github.com/flux-gui/flux-gui/commit/commit",
       );
     });
     it("should return default version without prefix for full response if loading data", () => {
@@ -373,7 +373,7 @@ describe("utils lib", () => {
 
       expect(appVersion.versionText).toEqual(`default version`);
       expect(appVersion.versionHref).toEqual(
-        "https://github.com/weaveworks/weave-gitops/releases/tag/vdefault version",
+        "https://github.com/flux-gui/flux-gui/releases/tag/vdefault version",
       );
     });
     it("should return api version without prefix for full response", () => {
@@ -381,7 +381,7 @@ describe("utils lib", () => {
 
       expect(appVersion.versionText).toEqual("branch-commit");
       expect(appVersion.versionHref).toEqual(
-        "https://github.com/weaveworks/weave-gitops/commit/commit",
+        "https://github.com/flux-gui/flux-gui/commit/commit",
       );
     });
   });

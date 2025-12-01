@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Weave GitOps Core API",
-    "description": "The API handles operations for Weave GitOps Core",
+    "title": "Flux-GUI Core API",
+    "description": "The API handles operations for Flux-GUI Core",
     "version": "0.1"
   },
   "tags": [
@@ -604,7 +604,7 @@
     },
     "/v1/runtime_crds": {
       "get": {
-        "summary": "ListRuntimeCrds lists Weave GitOps runtime components CRDs.\nWeave GitOps runtime is composed of Flux runtime but also other components\nin the ecosystem like TF-controller or Policy Agent.",
+        "summary": "ListRuntimeCrds lists Flux-GUI runtime components CRDs.\nFlux-GUI runtime is composed of Flux runtime but also other components\nin the ecosystem like TF-controller or Policy Agent.",
         "operationId": "Core_ListRuntimeCrds",
         "responses": {
           "200": {
@@ -635,7 +635,7 @@
     },
     "/v1/runtime_objects": {
       "get": {
-        "summary": "ListRuntimeObjects lists Weave GitOps runtime components.\nWeave GitOps runtime is composed of Flux runtime but also other components\nin the ecosystem like TF-controller or Policy Agent.",
+        "summary": "ListRuntimeObjects lists Flux-GUI runtime components.\nFlux-GUI runtime is composed of Flux runtime but also other components\nin the ecosystem like TF-controller or Policy Agent.",
         "operationId": "Core_ListRuntimeObjects",
         "responses": {
           "200": {

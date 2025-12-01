@@ -8,7 +8,7 @@ Accepted
 
 ## Context
 
-As we begin to implement more features and integrate with more projects, it will be crucial for us to agree to a desired architecture for Weave GitOps Core. This document seeks to lay out the aspirational architecture for a conceptual "v1" of the project.
+As we begin to implement more features and integrate with more projects, it will be crucial for us to agree to a desired architecture for Flux-GUI Core. This document seeks to lay out the aspirational architecture for a conceptual "v1" of the project.
 
 The goals for this proposed architecture are as follows.
 
@@ -127,7 +127,7 @@ func (a addService) Add(app models.Application, cl models.Cluster, params AddPar
 
 ```
 
-### Weave GitOps Repository Directory Structure
+### Flux-GUI Repository Directory Structure
 
 Go packages are coupled with the file system in such a way that it is neccessary to propose an example directory structure. Note that this is an example only, and does not seek to enumerate all files or reflect the actual packages that will exist. Here is an example of what the repo might look like:
 

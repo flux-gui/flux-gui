@@ -1,5 +1,5 @@
 ---
-title: Azure and Weave GitOps Enterprise Installation
+title: Azure and Flux-GUI Enterprise Installation
 hide_title: true
 ---
 
@@ -10,9 +10,9 @@ import oauthBitbucket from '/img/oauth-bitbucket.png';
 import oauthAzureDevOps from '/img/oauth-azure-devops.png';
 import oauthAzureDevOpsSuccess from '/img/oauth-azure-devops-success.png';
 
-# Azure and Weave GitOps Enterprise Installation<TierLabel tiers="Enterprise" />
+# Azure and Flux-GUI Enterprise Installation<TierLabel tiers="Enterprise" />
 
-Once you successfully create your Kubernetes cluster in Azure Marketplace, follow these steps to Install Weave GitOps Enterprise. These instructions apply to both Azure AKS and Azure ARC clusters—they'll behave in the same way.
+Once you successfully create your Kubernetes cluster in Azure Marketplace, follow these steps to Install Flux-GUI Enterprise. These instructions apply to both Azure AKS and Azure ARC clusters—they'll behave in the same way.
 
 :::tip
 If you have already installed [Flux](https://fluxcd.io/flux/cmd/), then Azure Flux will refuse to install.
@@ -20,7 +20,7 @@ If you have already installed [Flux](https://fluxcd.io/flux/cmd/), then Azure Fl
 
 ## 1. Choose the “GitOps” Option in the Marketplace
 
-Search for Weave GitOps Enterprise in the "Extensions + Applications" of the [Azure Marketplace](https://portal.azure.com/signin/index/). Click the "GitOps" option. This will take you to a screen that presents a first-class item called `Type: Flux v2`.
+Search for Flux-GUI Enterprise in the "Extensions + Applications" of the [Azure Marketplace](https://portal.azure.com/signin/index/). Click the "GitOps" option. This will take you to a screen that presents a first-class item called `Type: Flux v2`.
 
 Click GitOps => Create.
 
@@ -168,7 +168,7 @@ WGE is now configured to ask users for authorization the next time a pull reques
 
 ## 4. Configure Your Password
 
-First, install the Weave GitOps Enterprise CLI tool. To do this, you can use either brew or curl.
+First, install the Flux-GUI Enterprise CLI tool. To do this, you can use either brew or curl.
 
 <Tabs groupId="weave-gitops-cli" default="homebrew">
 <TabItem value="homebrew" label="Homebrew">
@@ -203,11 +203,11 @@ A validation to know it’s working:
 kubectl get secret -n flux-system cluster-user-auth
 ```
 
-## 5. Install Weave GitOps Enterprise to Your Cluster
+## 5. Install Flux-GUI Enterprise to Your Cluster
 
 First, you'll get taken to the Weaveworks portal on the Azure platform, which provides your subscription details.
 
-Search for Weave GitOps. Pick "View private products" and choose WGE. Fill out the forms, selecting your cluster, then choose "Review and Create".
+Search for Flux-GUI. Pick "View private products" and choose WGE. Fill out the forms, selecting your cluster, then choose "Review and Create".
 
 ## 6. Apply Extra Configuration
 

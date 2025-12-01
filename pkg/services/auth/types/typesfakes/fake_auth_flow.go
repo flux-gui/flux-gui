@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/weaveworks/weave-gitops/pkg/services/auth/types"
+	"github.com/flux-gui/flux-gui/pkg/services/auth/types"
 )
 
 type FakeAuthFlow struct {

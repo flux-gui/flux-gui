@@ -12,13 +12,13 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/clustersmngrfakes"
-	"github.com/weaveworks/weave-gitops/core/nsaccess"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/services/crd"
-	"github.com/weaveworks/weave-gitops/pkg/testutils"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/clustersmngrfakes"
+	"github.com/flux-gui/flux-gui/core/nsaccess"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/services/crd"
+	"github.com/flux-gui/flux-gui/pkg/testutils"
 )
 
 const defaultClusterName = "Default"

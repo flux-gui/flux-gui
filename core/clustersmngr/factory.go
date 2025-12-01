@@ -19,10 +19,10 @@ import (
 	_ "sigs.k8s.io/controller-runtime/pkg/log"
 	_ "sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	"github.com/weaveworks/weave-gitops/core/nsaccess"
-	"github.com/weaveworks/weave-gitops/pkg/featureflags"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	"github.com/flux-gui/flux-gui/core/nsaccess"
+	"github.com/flux-gui/flux-gui/pkg/featureflags"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 //go:generate go run github.com/maxbrunsfeld/counterfeiter/v6 -generate

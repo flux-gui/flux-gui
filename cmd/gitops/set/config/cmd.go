@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/cmderrors"
-	cfg "github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/pkg/config"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/cmd/gitops/cmderrors"
+	cfg "github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/pkg/config"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 const (
@@ -24,9 +24,9 @@ var analyticsValue bool
 func ConfigCommand(opts *cfg.Options) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "config",
-		Short: "Set the CLI configuration for Weave GitOps",
+		Short: "Set the CLI configuration for Flux-GUI",
 		Example: `
-# Enables analytics in the current user's CLI configuration for Weave GitOps
+# Enables analytics in the current user's CLI configuration for Flux-GUI
 gitops set config analytics true`,
 		SilenceUsage:      true,
 		SilenceErrors:     true,

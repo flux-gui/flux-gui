@@ -16,9 +16,9 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client/fake"
 
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	logger2 "github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/run/constants"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	logger2 "github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/run/constants"
 )
 
 func TestGetSessionLogsIntegration(t *testing.T) {

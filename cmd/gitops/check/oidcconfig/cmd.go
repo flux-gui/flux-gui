@@ -10,12 +10,12 @@ import (
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/cmderrors"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/oidc/check"
-	"github.com/weaveworks/weave-gitops/pkg/run"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/cmd/gitops/cmderrors"
+	"github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/oidc/check"
+	"github.com/flux-gui/flux-gui/pkg/run"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 // OIDCConfigCommand returns the cobra command for running `oidc-config`.
@@ -35,7 +35,7 @@ func OIDCConfigCommand(opts *config.Options) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "oidc-config",
 		Short: "Check an OIDC configuration for proper functionality.",
-		Long: `This command will send the user through an OIDC authorization code flow using the given OIDC configuration. This is helpful for verifying that a given configuration will work properly with Weave GitOps or for debugging issues. Without any provided flags it will read the configuration from a Secret on the cluster.
+		Long: `This command will send the user through an OIDC authorization code flow using the given OIDC configuration. This is helpful for verifying that a given configuration will work properly with Flux-GUI or for debugging issues. Without any provided flags it will read the configuration from a Secret on the cluster.
 
 NOTE: Make sure to configure your OIDC provider so that it accepts "http://localhost:9876" as redirect URI.`,
 		Example: `

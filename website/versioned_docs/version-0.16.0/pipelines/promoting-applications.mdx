@@ -34,7 +34,7 @@ Before configuring any of the above promotion strategies, you need to setup noti
 
 Applications deployed in leaf clusters use the Flux notification controller running on each leaf cluster, to notify the management cluster of a successful promotion. This requires network connectivity to be established between the leaf cluster and the management cluster.
 
-The component responsible for listening to incoming notifications from leaf clusters is the pipeline controller. It hosts a webhook service that needs to be exposed via an ingress resource to make it available for external calls. Exposing the webhook service is done via the Weave GitOps Enterprise Helm chart values and the configuration used depends on your environment. The example below shows the configuration for NGINX ingress controller and needs to be adjusted if another ingress controller is used:
+The component responsible for listening to incoming notifications from leaf clusters is the pipeline controller. It hosts a webhook service that needs to be exposed via an ingress resource to make it available for external calls. Exposing the webhook service is done via the Flux-GUI Enterprise Helm chart values and the configuration used depends on your environment. The example below shows the configuration for NGINX ingress controller and needs to be adjusted if another ingress controller is used:
 
 ```yaml
 spec:
@@ -97,7 +97,7 @@ The `address` field's URL path is comprised of 3 components again:
 1. The name of the pipeline resource.
 1. The origin environment's name. This is the name of the environment that the event is created in, e.g. "dev" for events coming from the "dev" environment.
 
-Weave GitOps Enterprise can then parse the incoming URL path to identify the pipeline resource and look up the next environment for the defined promotion action.
+Flux-GUI Enterprise can then parse the incoming URL path to identify the pipeline resource and look up the next environment for the defined promotion action.
 
 An example Alert might look like this:
 
@@ -129,7 +129,7 @@ Now as soon as the `HelmRelease` on the first environment defined in the pipelin
 This section covers adding a promotion by pull request (PR) strategy, so that whenever the application defined in a pipeline
 is upgraded in one of the pipeline's environments, a PR is created that updates the manifest file setting the application version in the next environment.
 
-The dynamic nature of GitOps deployments requires you to assist Weave GitOps a little with information on which repository hosts the manifest files,
+The dynamic nature of GitOps deployments requires you to assist Flux-GUI a little with information on which repository hosts the manifest files,
 how to authenticate with the repository and the Git provider API, and which file hosts the version definition for each environment.
 
 ### Supported Git Providers
@@ -205,7 +205,7 @@ The value of the `$promotion` field in the comment is comprised of 3 components 
 1. The second field denotes the name of the pipeline resource.
 1. The third field is the name of the environment that this specific HelmRelease targets. The environment name in the marker needs to match with the `name` field of one of the environments defined in the pipeline's `.spec.environments` array.
 
-Weave GitOps Enterprise will look for this marker whenever it receives an event from the respective HelmRelease of one of the leaf clusters and patch the file with the version denoted in the event (see the section above for instructions on setting up notification events from leaf clusters). Finally, it will create a Git provider PR to update the version of the application for the next environment in the pipeline.
+Flux-GUI Enterprise will look for this marker whenever it receives an event from the respective HelmRelease of one of the leaf clusters and patch the file with the version denoted in the event (see the section above for instructions on setting up notification events from leaf clusters). Finally, it will create a Git provider PR to update the version of the application for the next environment in the pipeline.
 
 ## Notification
 

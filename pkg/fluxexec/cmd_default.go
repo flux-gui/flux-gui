@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/weaveworks/weave-gitops/core/logger"
+	"github.com/flux-gui/flux-gui/core/logger"
 )
 
 func (flux *Flux) runFluxCmd(ctx context.Context, cmd *exec.Cmd) error {

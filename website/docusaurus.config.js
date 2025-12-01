@@ -1,7 +1,7 @@
 const versions = require("./versions.json");
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "Weave GitOps",
+  title: "Flux-GUI",
   tagline: "The Flux expansion pack from the founders of Flux",
   url: process.env.DOC_URL || "https://docs.gitops.weaveworks.org",
   baseUrl: process.env.DOC_BASE_URL || "/",
@@ -84,9 +84,9 @@ module.exports = {
   ],
   themeConfig: {
     navbar: {
-      title: "Weave GitOps",
+      title: "Flux-GUI",
       logo: {
-        alt: "Weave GitOps Logo",
+        alt: "Flux-GUI Logo",
         src: "img/weave-logo.png",
       },
       items: [
@@ -118,7 +118,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: "https://github.com/weaveworks/weave-gitops",
+          href: "https://github.com/flux-gui/flux-gui",
           label: "GitHub",
           position: "right",
         },
@@ -141,7 +141,7 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/weaveworks/weave-gitops",
+              href: "https://github.com/flux-gui/flux-gui",
             },
           ],
         },
@@ -206,7 +206,7 @@ module.exports = {
         docs: {
           id: 'default',
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/weaveworks/weave-gitops/edit/main/website",
+          editUrl: "https://github.com/flux-gui/flux-gui/edit/main/website",
           onlyIncludeVersions: (() => {
             if (process.env.STAGING_BUILD === "true") {
               // Build the last 3 versions for staging to speed it up a bit
@@ -221,7 +221,7 @@ module.exports = {
         blog: {
           showReadingTime: true,
           editUrl:
-            "https://github.com/weaveworks/weave-gitops/edit/main/website/blog",
+            "https://github.com/flux-gui/flux-gui/edit/main/website/blog",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

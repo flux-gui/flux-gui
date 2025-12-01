@@ -13,8 +13,8 @@ import (
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/pkg/run"
+	"github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/pkg/run"
 )
 
 var kubeConfigArgs *genericclioptions.ConfigFlags

@@ -40,7 +40,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   annotations:
-    metadata.weave.works/description: This is the source location for the Weave GitOps Dashboard's helm chart.
+    metadata.weave.works/description: This is the source location for the Flux-GUI Dashboard's helm chart.
   labels:
     app.kubernetes.io/component: ui
     app.kubernetes.io/created-by: weave-gitops-cli
@@ -58,7 +58,7 @@ kind: HelmRelease
 metadata:
   name: ww-gitops
   namespace: flux-system
-  metadata.weave.works/description: This is the Weave GitOps Dashboard.  It provides
+  metadata.weave.works/description: This is the Flux-GUI Dashboard.  It provides
       a simple way to get insights into your GitOps workloads.
 spec:
   chart:

@@ -10,7 +10,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 
 # Using GitOpsTemplates for Pipelines <TierLabel tiers="Enterprise" />
 
-To create new Pipelines and their required resources from within Weave GitOps
+To create new Pipelines and their required resources from within Flux-GUI
 Enterprise, you can leverage [GitOpsTemplates](../../gitops-templates/intro) to help platform teams scale for developer self-service. 
 
 This document will provide example configuration which could be adapted for use within your own organization, based on your [tenancy model](https://kubernetes.io/blog/2021/04/15/three-tenancy-models-for-kubernetes/) of choice.
@@ -26,8 +26,8 @@ For advice on Secrets Management, you can refer to the Flux guide [here](https:/
 
 Templates can include a single resource or multiple resources depending on your use case, for example - you may want to only create the Pipeline custom resource to associate existing HelmReleases, or you could create the HelmReleases, notification controller resources, and Pipeline all in a single template. They are highly customizable to suit your teams' needs.
 
-## Adding new resources from within the Weave GitOps Enterprise dashboard
-GitOpsTemplates are custom resources installed onto the management cluster where Weave GitOps Enterprise resides. To add a new Pipeline, click `Create a Pipeline` from within the Pipeline view, which will take you to a pre-filtered list of templates with the label: `weave.works/template-type: pipeline`.
+## Adding new resources from within the Flux-GUI Enterprise dashboard
+GitOpsTemplates are custom resources installed onto the management cluster where Flux-GUI Enterprise resides. To add a new Pipeline, click `Create a Pipeline` from within the Pipeline view, which will take you to a pre-filtered list of templates with the label: `weave.works/template-type: pipeline`.
 
 ![Create Pipeline button in Pipeline view](img/pipelines-table-create.png)
 
@@ -42,7 +42,7 @@ This section provides examples to help you build your own templates for Pipeline
 ### Pipeline - Visualization only
 
 :::tip Included Sample
-This template is shipped by default with Weave GitOps Enterprise to help you get started with Pipelines.
+This template is shipped by default with Flux-GUI Enterprise to help you get started with Pipelines.
 :::
 
 For flexibility, this allows the user of the template to specify the names of the Clusters where the application is deployed, and to vary the namespace per cluster. This means it would even work in a tenancy model where environments co-exist on the same cluster and use namespaces for isolation. 
@@ -62,7 +62,7 @@ metadata:
 spec:
   description: Sample Pipeline showing visualization of two helm releases across two environments.
   params:
-    - name: RESOURCE_NAME # This is a required parameter name to enable Weave GitOps to write to your Git Repository
+    - name: RESOURCE_NAME # This is a required parameter name to enable Flux-GUI to write to your Git Repository
       description: Name of the Pipeline
     - name: RESOURCE_NAMESPACE
       description: Namespace for the Pipeline on the management cluster

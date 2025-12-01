@@ -15,7 +15,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	wegohttp "github.com/weaveworks/weave-gitops/pkg/http"
+	wegohttp "github.com/flux-gui/flux-gui/pkg/http"
 )
 
 func portInUse(port int) bool {

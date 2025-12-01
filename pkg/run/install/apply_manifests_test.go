@@ -11,7 +11,7 @@ import (
 	. "github.com/onsi/gomega"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 // mock ssa.ResourceManager

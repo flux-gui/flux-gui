@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/term"
 
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 // readPasswordFromStdin reads a password from stdin and returns the input

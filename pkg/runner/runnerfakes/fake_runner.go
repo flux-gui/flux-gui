@@ -4,7 +4,7 @@ package runnerfakes
 import (
 	"sync"
 
-	"github.com/weaveworks/weave-gitops/pkg/runner"
+	"github.com/flux-gui/flux-gui/pkg/runner"
 )
 
 type FakeRunner struct {

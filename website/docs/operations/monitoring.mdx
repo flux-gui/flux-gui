@@ -9,7 +9,7 @@ import TierLabel from "./../_components/TierLabel";
 
 # Monitoring <TierLabel tiers="Enterprise" />
 
-Weave GitOps Enterprise provides monitoring telemetry and tooling for metrics and [profiling](#profiling). WGE generates [Prometheus](https://prometheus.io/) metrics for monitoring both performance and business operations.
+Flux-GUI Enterprise provides monitoring telemetry and tooling for metrics and [profiling](#profiling). WGE generates [Prometheus](https://prometheus.io/) metrics for monitoring both performance and business operations.
 
 ## Setup
 
@@ -59,7 +59,7 @@ spec:
   interval: 10m0s
   ref:
     branch: main
-  url: https://github.com/weaveworks/weave-gitops-quickstart
+  url: https://github.com/flux-gui/flux-gui-quickstart
 ---
 apiVersion: v1
 kind: Namespace
@@ -84,7 +84,7 @@ spec:
 
 </details>
 
-3. Deploy Weave GitOps Monitoring Config
+3. Deploy Flux-GUI Monitoring Config
 
 <details>
 <summary>Expand to see manifest contents</summary>
@@ -115,15 +115,15 @@ spec:
 
 ### Dashboards
 
-**Weave GitOps Overview**
+**Flux-GUI Overview**
 
-Monitor Weave GitOps golden signals for API server and controllers:
+Monitor Flux-GUI golden signals for API server and controllers:
 
 ![weave gitops dashboard list](imgs/monitoring-dashboard-overview.png)
 
-**Weave GitOps Runtime**
+**Flux-GUI Runtime**
 
-Monitor Weave GitOps Go runtime metrics like memory usage, memory heap, and Goroutines, among others.
+Monitor Flux-GUI Go runtime metrics like memory usage, memory heap, and Goroutines, among others.
 
 ![weave gitops dashboard list](imgs/monitoring-dashboard-runtime.png)
 
@@ -133,8 +133,8 @@ You can also monitor [Explorer golden signals](../../explorer/operations#monitor
 
 ## Profiling
 
-During operations, profiling is useful for gaining a deeper understanding of how Weave GitOps runtime behaves.
-Given that Weave GitOps is written in Go, profiling happens through [pprof](https://pkg.go.dev/runtime/pprof). It is
+During operations, profiling is useful for gaining a deeper understanding of how Flux-GUI runtime behaves.
+Given that Flux-GUI is written in Go, profiling happens through [pprof](https://pkg.go.dev/runtime/pprof). It is
 exposed as a web endpoint by [pprof http](https://pkg.go.dev/net/http/pprof).
 
 ### Get Started with Profiling

@@ -5,7 +5,7 @@ hide_title: true
 
 # Overview
 
-[Terraform Controller](https://github.com/weaveworks/tf-controller) (TF-Controller) is a reliable tool for managing your infrastructure and application resources using the GitOps approach, all at your own pace. An open source project created by Weaveworks, the makers of [Flux](https://fluxcd.io), TF-Controller follows patterns established by Flux and integrates with Weave GitOps. 
+[Terraform Controller](https://github.com/weaveworks/tf-controller) (TF-Controller) is a reliable tool for managing your infrastructure and application resources using the GitOps approach, all at your own pace. An open source project created by Weaveworks, the makers of [Flux](https://fluxcd.io), TF-Controller follows patterns established by Flux and integrates with Flux-GUI. 
 
 TF-Controller makes the following GitOps models available to suit your specific needs:
 
@@ -16,7 +16,7 @@ TF-Controller makes the following GitOps models available to suit your specific 
 
 To get started with TF-controller, simply follow the provided [getting started](get-started-terraform.mdx) guide. You can also find [extensive documentation here](https://weaveworks.github.io/tf-controller/)—it covers API references, CLI references, and [how-to's](https://weaveworks.github.io/tf-controller/use_tf_controller/) for common situations.
 
-With Weave GitOps Enterprise, you can manage `Terraform` objects the same way you can with `Kustomization` and `HelmReleases`:
+With Flux-GUI Enterprise, you can manage `Terraform` objects the same way you can with `Kustomization` and `HelmReleases`:
 
 ![WGE Enterprise dashboard showing Terraform view](/img/dashboard-terraform.png)
 
@@ -40,9 +40,9 @@ With Weave GitOps Enterprise, you can manage `Terraform` objects the same way yo
 
 ## Dependencies
 
-TF-controller has its own versioning system that is separate from the versioning system used by Weave GitOps.
-This means that you can install and use TF-controller independently of Weave GitOps—it will not be affected
-by the version of Weave GitOps that you are using.
+TF-controller has its own versioning system that is separate from the versioning system used by Flux-GUI.
+This means that you can install and use TF-controller independently of Flux-GUI—it will not be affected
+by the version of Flux-GUI that you are using.
 
 Here is the dependency matrix:
 

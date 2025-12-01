@@ -17,7 +17,7 @@ import (
 	"k8s.io/client-go/util/retry"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 func RequestReconciliation(ctx context.Context, kubeClient client.Client, namespacedName types.NamespacedName, gvk schema.GroupVersionKind) (string, error) {

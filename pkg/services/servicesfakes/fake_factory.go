@@ -5,10 +5,10 @@ import (
 	"context"
 	"sync"
 
-	"github.com/weaveworks/weave-gitops/pkg/git"
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/services"
+	"github.com/flux-gui/flux-gui/pkg/git"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/services"
 )
 
 type FakeFactory struct {

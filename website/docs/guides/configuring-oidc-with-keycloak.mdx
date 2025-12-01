@@ -2,14 +2,14 @@
 title: Configuring OIDC with Keycloak
 ---
 
-In this guide we will show you how to enable users to login to the Weave GitOps dashboard by authenticating them against a Keycloak instance.
+In this guide we will show you how to enable users to login to the Flux-GUI dashboard by authenticating them against a Keycloak instance.
 
-This example uses [Keycloak](https://www.keycloak.org/) and assumes Weave GitOps has already been installed on the Kubernetes Cluster.
+This example uses [Keycloak](https://www.keycloak.org/) and assumes Flux-GUI has already been installed on the Kubernetes Cluster.
 
 ## Pre-requisites
 
 - A Kubernetes cluster
-- Weave GitOps is [installed](../../intro-weave-gitops/#getting-started) and [TLS has been enabled](../../enterprise/getting-started/install-enterprise/#tls-configuration)
+- Flux-GUI is [installed](../../intro-weave-gitops/#getting-started) and [TLS has been enabled](../../enterprise/getting-started/install-enterprise/#tls-configuration)
 - Access to a running Keycloak installation
 
 ## Configuring a new Keycloak Realm
@@ -62,8 +62,8 @@ In the `Capability config` pane:
 
 Finally, in the `Login settings` pane:
 
-1. Set the `Home URL` for your client to the URL of your Weave GitOps instance. For this demo, that's `https://WEAVE_GITOPS_URL`
-1. Set the `Valid redirect URIs` to the URL of your Weave GitOps instance followed by `/oauth2/callback`. For this demo, that's `https://WEAVE_GITOPS_URL/oauth2/callback`
+1. Set the `Home URL` for your client to the URL of your Flux-GUI instance. For this demo, that's `https://WEAVE_GITOPS_URL`
+1. Set the `Valid redirect URIs` to the URL of your Flux-GUI instance followed by `/oauth2/callback`. For this demo, that's `https://WEAVE_GITOPS_URL/oauth2/callback`
 1. Click on `Save`
 
 ### Creating the Groups Mapper for the Keycloak Client
@@ -121,7 +121,7 @@ You should now be able to see your new role configured.
 
 ### Obtaining the client secret
 
-Now that everything is configured, we need to grab the client secret from Keycloak in order to configure OIDC for Weave GitOps.
+Now that everything is configured, we need to grab the client secret from Keycloak in order to configure OIDC for Flux-GUI.
 
 ![Keycloak new mapper in list](img/kc_step_17.png)
 
@@ -177,16 +177,16 @@ In the dialog that opens up:
 
 The role should now appear in the `Role mapping` section and our user should be fully configured.
 
-## Configuring Weave GitOps to use our new Keycloak Client
+## Configuring Flux-GUI to use our new Keycloak Client
 
-Now that our Keycloak configuration is done, it's time to link our Weave GitOps deployment to it.
+Now that our Keycloak configuration is done, it's time to link our Flux-GUI deployment to it.
 
 ### Creating the `oidc-auth` secret
 
-To configure Weave GitOps for OIDC authentication via Keycloak, we need to configure the `oidc-auth` secret. We need to set:
+To configure Flux-GUI for OIDC authentication via Keycloak, we need to configure the `oidc-auth` secret. We need to set:
 
 - the `issuerURL` to the URL of our keycloak instance, followed by `/realms/<realm_name>`
-- the `redirectURL` to the URL of our Weave GitOps instance, followed by `/oauth2/callback`
+- the `redirectURL` to the URL of our Flux-GUI instance, followed by `/oauth2/callback`
 - the `clientID` to the id of the client we created in the previous steps
 - the `clientSecret` to the secret we copied a few steps ago
 - the `customScopes` to `email`
@@ -213,11 +213,11 @@ stringData:
 
 </details>
 
-After this secret is created, you may need to delete the Weave GitOps pods in order to restart the app and load the new config.
+After this secret is created, you may need to delete the Flux-GUI pods in order to restart the app and load the new config.
 
 ### Setting up RBAC
 
-Once Weave GitOps is configured for OIDC, we need a way to map permissions to the groups. To do that, we need to create role bindings for our `wego-admin` group.
+Once Flux-GUI is configured for OIDC, we need a way to map permissions to the groups. To do that, we need to create role bindings for our `wego-admin` group.
 The following example assumes that the ClusterRole `wego-admin-cluster-role` and the namespaced Role `wego-admin-role` already exist. It will grant everyone
 in the `wego-admin` group within Keycloak admin access. See the [recommendations on setting up RBAC](../../enterprise/getting-started/install-enterprise/#recommended-rbac-configuration)
 for details.
@@ -249,7 +249,7 @@ Now that everything is set up, let's test our configuration.
 
 ![Test config step 1](img/kc_step_26.png)
 
-Navigate to your Weave GitOps dashboard URL and click on the `Login With Keycloak` button. You should be redirected to a Keycloak Login page.
+Navigate to your Flux-GUI dashboard URL and click on the `Login With Keycloak` button. You should be redirected to a Keycloak Login page.
 
 ![Test config step 2](img/kc_step_27.png)
 
@@ -257,4 +257,4 @@ In the page that opens up, input your demo user credentials and click on `Sign I
 
 ![Test config step 3](img/kc_step_28.png)
 
-You should now be redirected back to Weave GitOps and, thanks to the RBAC configuration, you should now see all of the configured applications.
+You should now be redirected back to Flux-GUI and, thanks to the RBAC configuration, you should now see all of the configured applications.

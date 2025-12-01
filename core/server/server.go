@@ -8,11 +8,11 @@ import (
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"k8s.io/client-go/rest"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr"
-	"github.com/weaveworks/weave-gitops/core/nsaccess"
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/health"
-	"github.com/weaveworks/weave-gitops/pkg/services/crd"
+	"github.com/flux-gui/flux-gui/core/clustersmngr"
+	"github.com/flux-gui/flux-gui/core/nsaccess"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/health"
+	"github.com/flux-gui/flux-gui/pkg/services/crd"
 )
 
 func Hydrate(ctx context.Context, mux *runtime.ServeMux, cfg CoreServerConfig) error {

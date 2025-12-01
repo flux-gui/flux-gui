@@ -32,9 +32,9 @@ To release a new version of Weave Gitops, you need to:
 - Verify that there are no outstanding PRs that need to be merged in the weave-gitops-dev channel on Slack, notify the channel that you are starting the release process, and to not merge anything into main until you say otherwise.
 - Decide on an appropriate release number depending on if you want a
   pre-release or stable release. Do include a leading `v`. See [the
-  releases page](https://github.com/weaveworks/weave-gitops/releases)
+  releases page](https://github.com/flux-gui/flux-gui/releases)
   for previous releases.
-- Go to [the action to prepare a release](https://github.com/weaveworks/weave-gitops/actions/workflows/prepare-release.yaml)
+- Go to [the action to prepare a release](https://github.com/flux-gui/flux-gui/actions/workflows/prepare-release.yaml)
   and click "Run workflow". In the popup, enter the version number you
   want and kick it off.
 - Wait for the action to finish (1-5 minutes, depending on if it's an
@@ -73,10 +73,10 @@ traceable form main.
 
 Each stable release emits the artifacts listed below:
 
-- [versioned instance of the website](https://github.com/weaveworks/weave-gitops/tree/main/website/versioned_docs)
-- [New chart version](https://github.com/weaveworks/weave-gitops/pkgs/container/charts%2Fweave-gitops)
-- [Git tag](https://github.com/weaveworks/weave-gitops/tags)
-- [gitops binaries](https://github.com/weaveworks/weave-gitops/releases)
+- [versioned instance of the website](https://github.com/flux-gui/flux-gui/tree/main/website/versioned_docs)
+- [New chart version](https://github.com/flux-gui/flux-gui/pkgs/container/charts%2Fweave-gitops)
+- [Git tag](https://github.com/flux-gui/flux-gui/tags)
+- [gitops binaries](https://github.com/flux-gui/flux-gui/releases)
 - updated [Homebrew Tap](https://github.com/weaveworks/homebrew-tap/blob/master/Formula/gitops.rb)
-- [npm package](https://github.com/weaveworks/weave-gitops/pkgs/npm/weave-gitops)
-- [weave-gitops container image](https://github.com/weaveworks/weave-gitops/pkgs/container/weave-gitops)
+- [npm package](https://github.com/flux-gui/flux-gui/pkgs/npm/weave-gitops)
+- [weave-gitops container image](https://github.com/flux-gui/flux-gui/pkgs/container/weave-gitops)

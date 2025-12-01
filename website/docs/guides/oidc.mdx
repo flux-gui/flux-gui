@@ -2,16 +2,16 @@
 title: Common OIDC provider configurations
 ---
 
-This page provides guides for configuring Weave GitOps with the most common OIDC providers.
+This page provides guides for configuring Flux-GUI with the most common OIDC providers.
 
 ## Google
 
-Google's identity provider does not support the groups scope which Weave GitOps requests by default. That's why in
+Google's identity provider does not support the groups scope which Flux-GUI requests by default. That's why in
 this example the `customScopes` field is set to only request the `openid` and `email` scopes.
 
 1. Obtain the client ID and secret by following the [official guide](https://developers.google.com/identity/openid-connect/openid-connect)
    from Google.
-1. Configure Weave GitOps:
+1. Configure Flux-GUI:
 
    ```yaml
    apiVersion: v1
@@ -32,7 +32,7 @@ this example the `customScopes` field is set to only request the `openid` and `e
 1. Obtain the client ID and secret by following the [official guide](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
    from Microsoft.
 1. [optional] Configure group claims by following this [official guide](https://learn.microsoft.com/en-us/security/zero-trust/develop/configure-tokens-group-claims-app-roles).
-1. Configure Weave GitOps:
+1. Configure Flux-GUI:
 
    ```yaml
    apiVersion: v1
@@ -52,4 +52,4 @@ this example the `customScopes` field is set to only request the `openid` and `e
 ## Keycloak
 
 Keycloak is highly customizable so the steps to obtain client ID and secret will vary depending on your setup. That's why
-there is a [dedicated guide on setting up Keycloak and Weave GitOps to work together](./configuring-oidc-with-keycloak.mdx).
+there is a [dedicated guide on setting up Keycloak and Flux-GUI to work together](./configuring-oidc-with-keycloak.mdx).

@@ -11,8 +11,8 @@ import (
 	"golang.org/x/oauth2"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/weaveworks/weave-gitops/core/logger"
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/core/logger"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
 )
 
 type statusRecorder struct {

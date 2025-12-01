@@ -7,11 +7,11 @@ import (
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 	"k8s.io/client-go/discovery"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/check/oidcconfig"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/cmderrors"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/pkg/run"
-	"github.com/weaveworks/weave-gitops/pkg/services/check"
+	"github.com/flux-gui/flux-gui/cmd/gitops/check/oidcconfig"
+	"github.com/flux-gui/flux-gui/cmd/gitops/cmderrors"
+	"github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/pkg/run"
+	"github.com/flux-gui/flux-gui/pkg/services/check"
 )
 
 func GetCommand(opts *config.Options) *cobra.Command {

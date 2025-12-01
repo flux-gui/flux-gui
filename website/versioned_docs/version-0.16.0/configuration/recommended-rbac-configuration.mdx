@@ -14,7 +14,7 @@ on your specific circumstances and goals.
 ## Summary
 
 The general recommendation is to use OIDC and a small number of groups that
-are Weave GitOps can impersonate.
+are Flux-GUI can impersonate.
 
 OIDC is the recommended method for managing authentication as it decouples the
 need to manage user lists from the application, allowing it to be managed via
@@ -22,9 +22,9 @@ a central system designed for that purpose (i.e. the OIDC provider). OIDC also
 enables the creation of groups (either via your provider's own systems or by
 using a connector like [Dex](../guides/setting-up-dex.md)).
 
-Configuring Weave GitOps to impersonate kubernetes groups rather than
+Configuring Flux-GUI to impersonate kubernetes groups rather than
 users has the following benefits:
-* A user's permissions for impersonation by Weave GitOps can be separate from
+* A user's permissions for impersonation by Flux-GUI can be separate from
   any other permissions that they may or may not have within the cluster.
 * Users do not have to be individually managed within the cluster and can have
   their permissions managed together.
@@ -32,10 +32,10 @@ users has the following benefits:
 ## Example set up
 
 Assume that your company has the following people in OIDC
-* Aisha, a cluster admin, who should have full admin access to Weave GitOps
+* Aisha, a cluster admin, who should have full admin access to Flux-GUI
 * Brian, lead of team-A, who should have admin permissions to their team's
-  namespace in Weave GitOps and readonly-otherwise
-* June and Jo, developers in team-A who should have read-only access to Weave GitOps.
+  namespace in Flux-GUI and readonly-otherwise
+* June and Jo, developers in team-A who should have read-only access to Flux-GUI.
 
 You could then create 3 groups:
 
@@ -51,7 +51,7 @@ You could then create 3 groups:
     no `patch` permissions.
   - Aisha, Brian, June & Jo are all members
 
-The Weave GitOps service account can then be configured with:
+The Flux-GUI service account can then be configured with:
 ```yaml
 rbac:
   impersonationResourceNames: ["wego-admin", "wego-team-a-admin", "wego-readonly"]
@@ -59,15 +59,15 @@ rbac:
 ```
 so that only these three groups can be `impersonated` by the service account.
 
-:::caution Using OIDC for cluster and Weave GitOps Authentication
+:::caution Using OIDC for cluster and Flux-GUI Authentication
 If the same OIDC provider is used to authenticate a user with the cluster
-itself (e.g. for use with `kubectl`) and to Weave GitOps then, depending
+itself (e.g. for use with `kubectl`) and to Flux-GUI then, depending
 on OIDC configuration, they may end up with the super-set of their permissions
-from Weave GitOps and any other permissions granted to them.
+from Flux-GUI and any other permissions granted to them.
 
 This can lead to un-intended consequences (e.g. viewing `secrets`). To avoid
 this OIDC providers will often let you configure which groups are returned
-to which clients: the Weave GitOps groups should not be returned to the
+to which clients: the Flux-GUI groups should not be returned to the
 cluster client (and visa versa).
 :::
 

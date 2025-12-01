@@ -12,22 +12,22 @@ import (
 	"github.com/spf13/viper"
 	"k8s.io/client-go/rest"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/check"
-	cfg "github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/create"
-	deletepkg "github.com/weaveworks/weave-gitops/cmd/gitops/delete"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/docs"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/get"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/logs"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/replan"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/resume"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/set"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/suspend"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/version"
-	"github.com/weaveworks/weave-gitops/pkg/analytics"
-	"github.com/weaveworks/weave-gitops/pkg/config"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/utils"
+	"github.com/flux-gui/flux-gui/cmd/gitops/check"
+	cfg "github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/cmd/gitops/create"
+	deletepkg "github.com/flux-gui/flux-gui/cmd/gitops/delete"
+	"github.com/flux-gui/flux-gui/cmd/gitops/docs"
+	"github.com/flux-gui/flux-gui/cmd/gitops/get"
+	"github.com/flux-gui/flux-gui/cmd/gitops/logs"
+	"github.com/flux-gui/flux-gui/cmd/gitops/replan"
+	"github.com/flux-gui/flux-gui/cmd/gitops/resume"
+	"github.com/flux-gui/flux-gui/cmd/gitops/set"
+	"github.com/flux-gui/flux-gui/cmd/gitops/suspend"
+	"github.com/flux-gui/flux-gui/cmd/gitops/version"
+	"github.com/flux-gui/flux-gui/pkg/analytics"
+	"github.com/flux-gui/flux-gui/pkg/config"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/utils"
 )
 
 const defaultNamespace = "flux-system"
@@ -50,7 +50,7 @@ func RootCmd() *cobra.Command {
 		Use:           "gitops",
 		SilenceUsage:  true,
 		SilenceErrors: true,
-		Short:         "Weave GitOps",
+		Short:         "Flux-GUI",
 		Long:          "Command line utility for managing Kubernetes applications via GitOps.",
 		Example: `
   # Get help for gitops create dashboard command
@@ -136,9 +136,9 @@ func RootCmd() *cobra.Command {
 	}
 
 	rootCmd.PersistentFlags().StringP("namespace", "n", defaultNamespace, "The namespace scope for this operation")
-	rootCmd.PersistentFlags().StringVarP(&options.Endpoint, "endpoint", "e", os.Getenv("WEAVE_GITOPS_ENTERPRISE_API_URL"), "The Weave GitOps Enterprise HTTP API endpoint can be set with `WEAVE_GITOPS_ENTERPRISE_API_URL` environment variable")
-	rootCmd.PersistentFlags().StringVarP(&options.Username, "username", "u", "", "The Weave GitOps Enterprise username for authentication can be set with `WEAVE_GITOPS_USERNAME` environment variable")
-	rootCmd.PersistentFlags().StringVarP(&options.Password, "password", "p", "", "The Weave GitOps Enterprise password for authentication can be set with `WEAVE_GITOPS_PASSWORD` environment variable")
+	rootCmd.PersistentFlags().StringVarP(&options.Endpoint, "endpoint", "e", os.Getenv("WEAVE_GITOPS_ENTERPRISE_API_URL"), "The Flux-GUI Enterprise HTTP API endpoint can be set with `WEAVE_GITOPS_ENTERPRISE_API_URL` environment variable")
+	rootCmd.PersistentFlags().StringVarP(&options.Username, "username", "u", "", "The Flux-GUI Enterprise username for authentication can be set with `WEAVE_GITOPS_USERNAME` environment variable")
+	rootCmd.PersistentFlags().StringVarP(&options.Password, "password", "p", "", "The Flux-GUI Enterprise password for authentication can be set with `WEAVE_GITOPS_PASSWORD` environment variable")
 	rootCmd.PersistentFlags().BoolVar(&options.OverrideInCluster, "override-in-cluster", false, "override running in cluster check")
 	rootCmd.PersistentFlags().StringToStringVar(&options.GitHostTypes, "git-host-types", map[string]string{}, "Specify which custom domains are running what (github or gitlab)")
 	rootCmd.PersistentFlags().BoolVar(&options.InsecureSkipTLSVerify, "insecure-skip-tls-verify", false, "If true, the server's certificate will not be checked for validity. This will make your HTTPS connections insecure")

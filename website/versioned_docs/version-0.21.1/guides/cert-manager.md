@@ -2,14 +2,14 @@
 title: Generating TLS certificates with cert-manager and Let's Encrypt
 ---
 
-In this guide we will show you how to add cert-manager to a cluster bootstrapped with Weave GitOps, and how
+In this guide we will show you how to add cert-manager to a cluster bootstrapped with Flux-GUI, and how
 to configure the use of Let's Encrypt to issue TLS certificates.
 
 ### Pre-requisites
 
 - A Kubernetes cluster such as [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/) cluster running a
 [Flux-supported version of Kubernetes](https://fluxcd.io/docs/installation/#prerequisites)
-- Weave GitOps is [installed](../installation/index.mdx)
+- Flux-GUI is [installed](../installation/index.mdx)
 
 ## What is cert-manager?
 

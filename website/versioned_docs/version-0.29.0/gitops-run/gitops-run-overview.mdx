@@ -34,14 +34,14 @@ get started with GitOps:
   there is a lot of commit/push/reconcile workflows that can be frustrating.
   This skips that and you can test your changes directly before committing and
   pushing code to your Git repository.
-* Multiple options for debugging Flux such as using the Dashboard that comes with Weave GitOps or getting live feedback by leveraging the [GitOps Tools for Flux](https://marketplace.visualstudio.com/items?itemName=Weaveworks.vscode-gitops-tools) VSCode extension.
+* Multiple options for debugging Flux such as using the Dashboard that comes with Flux-GUI or getting live feedback by leveraging the [GitOps Tools for Flux](https://marketplace.visualstudio.com/items?itemName=Weaveworks.vscode-gitops-tools) VSCode extension.
 
 ## Terminology
 
 ### Modes
 
 #### GitOps:
-This is the default mode we are always aiming for when using Weave GitOps. Whenever GitOps Run
+This is the default mode we are always aiming for when using Flux-GUI. Whenever GitOps Run
 is not active we want users to be in this mode. This means that the cluster is being driven by
 some mechanism reading from Git, ideally Flux, and that system is applying those changes
 to the cluster.
@@ -59,7 +59,7 @@ rerun those commands or to transition to GitOps mode.
 
 ### Sessions
 
-Weave GitOps Run can has two different ways of interacting with your cluster.
+Flux-GUI Run can has two different ways of interacting with your cluster.
 
 #### Sandboxed
 

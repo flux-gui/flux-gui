@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/weaveworks/weave-gitops/pkg/gitproviders"
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/pkg/gitproviders"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
 )
 
 type FakeJWTClient struct {

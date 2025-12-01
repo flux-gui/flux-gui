@@ -12,12 +12,12 @@ import (
 	"github.com/spf13/cobra"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 
-	"github.com/weaveworks/weave-gitops/cmd/gitops/cmderrors"
-	"github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
-	"github.com/weaveworks/weave-gitops/pkg/run"
-	"github.com/weaveworks/weave-gitops/pkg/run/install"
+	"github.com/flux-gui/flux-gui/cmd/gitops/cmderrors"
+	"github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/pkg/kube"
+	"github.com/flux-gui/flux-gui/pkg/logger"
+	"github.com/flux-gui/flux-gui/pkg/run"
+	"github.com/flux-gui/flux-gui/pkg/run/install"
 )
 
 const (
@@ -46,10 +46,10 @@ var kubeConfigArgs *genericclioptions.ConfigFlags
 func DashboardCommand(opts *config.Options) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "dashboard",
-		Short: "Create a HelmRepository and HelmRelease to deploy Weave GitOps",
-		Long:  "Create a HelmRepository and HelmRelease to deploy Weave GitOps",
+		Short: "Create a HelmRepository and HelmRelease to deploy Flux-GUI",
+		Long:  "Create a HelmRepository and HelmRelease to deploy Flux-GUI",
 		Example: `
-# Create a HelmRepository and HelmRelease to deploy Weave GitOps
+# Create a HelmRepository and HelmRelease to deploy Flux-GUI
 gitops create dashboard ww-gitops \
   --password=$PASSWORD \
   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml

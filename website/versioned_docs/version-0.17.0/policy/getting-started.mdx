@@ -9,12 +9,12 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 
 # Getting started <TierLabel tiers="Enterprise" />
 
-This section introduces you to the Policy Profile and details the steps required to install it in Weave GitOps.
+This section introduces you to the Policy Profile and details the steps required to install it in Flux-GUI.
 
 ## Pre-requisites
 
-### Weave GitOps
-You need to have a running instance of Weave GitOps with at least one CAPI provider installed to provision Kubernetes clusters. See [Weave GitOps Installation](https://docs.gitops.weaveworks.org/docs/installation/) page for more details about installing Weave GitOps.
+### Flux-GUI
+You need to have a running instance of Flux-GUI with at least one CAPI provider installed to provision Kubernetes clusters. See [Flux-GUI Installation](https://docs.gitops.weaveworks.org/docs/installation/) page for more details about installing Flux-GUI.
 
 ### Policy Library
 For the policy agent to work, it will need a source for the policies that it will enforce in the cluster. You should have a policy library repo set up which includes your policies resources as CRDs. You can also add a `kustomization.yaml` file selecting the policies you want to install on that specific cluster that will be provisioned by Weave Gitops:
@@ -58,7 +58,7 @@ policySource:
 ```
 
 ## Policies in UI
-After the leaf cluster is provisioned and the profile is installed, you should now see the policies listed in the Policies tab in Weave GitOps UI.
+After the leaf cluster is provisioned and the profile is installed, you should now see the policies listed in the Policies tab in Flux-GUI UI.
 
 ![Policies](./img/weave-policies.png)
 
@@ -72,7 +72,7 @@ Now let's try to deploy a Kubernetes deployment that violates one of the enforce
 Once you apply it, the policy agent will deny this request and show a violation message.
 
 ## Violations Logs in UI
-You can view all the violation log in Weave GitOps UI to view all connected clusters policy violations, and where you can dive into the details of each violation. 
+You can view all the violation log in Flux-GUI UI to view all connected clusters policy violations, and where you can dive into the details of each violation. 
 
 <strong>Violations Log</strong>
 

@@ -6,7 +6,7 @@ Proposed
 
 ## Problem
 
-As part of the Core Reloaded Project we have removed the existing acceptance tests within the Weave GitOps Core repo. With the removal of a large number of `gitops` CLI commands, this is a good opportunity to evaluate the testing strategy for the short-mid term. This decision aims to codify discussions around the short/mid-term goals of acceptance testing (or lack thereof) within the GitOps Core product. 
+As part of the Core Reloaded Project we have removed the existing acceptance tests within the Flux-GUI Core repo. With the removal of a large number of `gitops` CLI commands, this is a good opportunity to evaluate the testing strategy for the short-mid term. This decision aims to codify discussions around the short/mid-term goals of acceptance testing (or lack thereof) within the GitOps Core product. 
 
 Clear the Way aims to provide a new foundation for the future development of the gitops core product, and therefore much of the existing CLI functionality has been removed and a new approach taken to how we interact with Flux. This resulted in a lack of clarity regarding the purpose and direction of the existing acceptance test, which along with a number of issues with the tests themselves lead to the decision to remove all existing acceptance tests.
 
@@ -52,6 +52,6 @@ When approaching the introduction of acceptance tests within the project **PR an
 
 ## Consequences
 
-These preferences are a departure to our previous philosophy of utilising acceptance tests. While consequences should be minimal, there is a risk that the introduction of acceptance testing into the Weave GitOps Core product will require a higher than normal amount of early investment time, as initial design will be important for the long term health of the tests. The same can be said for the introduction of testing methods not previously employed within the project, such as contract based testing.
+These preferences are a departure to our previous philosophy of utilising acceptance tests. While consequences should be minimal, there is a risk that the introduction of acceptance testing into the Flux-GUI Core product will require a higher than normal amount of early investment time, as initial design will be important for the long term health of the tests. The same can be said for the introduction of testing methods not previously employed within the project, such as contract based testing.
 
 Additionally, arguments could be made that there is an inherent risk associated with the lack of proper visual UI testing, such as selenium or cypress tests. The utilisation of projects such as jsdom can alleviate some of this risk, but the benefits of not investing too early in these testing methods can have payoff in velocity.

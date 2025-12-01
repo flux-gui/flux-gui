@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	isrc "github.com/weaveworks/weave-gitops/pkg/fluxinstall/internal/src"
+	isrc "github.com/flux-gui/flux-gui/pkg/fluxinstall/internal/src"
 )
 
 // Source represents an installer, finder, or builder

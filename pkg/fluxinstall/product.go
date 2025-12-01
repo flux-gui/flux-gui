@@ -14,8 +14,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/weaveworks/weave-gitops/pkg/fluxinstall/internal/httpclient"
-	isrc "github.com/weaveworks/weave-gitops/pkg/fluxinstall/internal/src"
+	"github.com/flux-gui/flux-gui/pkg/fluxinstall/internal/httpclient"
+	isrc "github.com/flux-gui/flux-gui/pkg/fluxinstall/internal/src"
 )
 
 type HTTPGetter interface {

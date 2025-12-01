@@ -3,7 +3,7 @@ package server
 import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/weaveworks/weave-gitops/core/server/types"
+	"github.com/flux-gui/flux-gui/core/server/types"
 )
 
 type matchLabelOptionFn func() (key, value string)

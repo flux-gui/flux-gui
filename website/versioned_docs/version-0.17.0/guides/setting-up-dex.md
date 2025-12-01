@@ -2,15 +2,15 @@
 title: Configuring OIDC with Dex and GitHub
 ---
 
-In this guide we will show you how to enable users to login to the Weave GitOps dashboard by authenticating with their GitHub account.
+In this guide we will show you how to enable users to login to the Flux-GUI dashboard by authenticating with their GitHub account.
 
-This example uses [Dex][tool-dex] and its GitHub connector, and assumes Weave GitOps has already been installed on a Kubernetes clusters.
+This example uses [Dex][tool-dex] and its GitHub connector, and assumes Flux-GUI has already been installed on a Kubernetes clusters.
 
 ### Pre-requisites
 
 - A Kubernetes cluster such as [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/) cluster running a
 [Flux-supported version of Kubernetes](https://fluxcd.io/docs/installation/#prerequisites)
-- Weave GitOps is [installed](../installation/index.mdx) and [TLS has been enabled](../configuration/tls.md).
+- Flux-GUI is [installed](../installation/index.mdx) and [TLS has been enabled](../configuration/tls.md).
 
 ## What is Dex?
 
@@ -110,7 +110,7 @@ spec:
         type: memory
 
       staticClients:
-      - name: 'Weave GitOps Core'
+      - name: 'Flux-GUI Core'
         id: weave-gitops
         secret: AiAImuXKhoI5ApvKWF988txjZ+6rG3S7o6X5En
         redirectURIs:

@@ -12,8 +12,8 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	coretypes "github.com/weaveworks/weave-gitops/core/server/types"
-	"github.com/weaveworks/weave-gitops/pkg/kube"
+	coretypes "github.com/flux-gui/flux-gui/core/server/types"
+	"github.com/flux-gui/flux-gui/pkg/kube"
 )
 
 type isLocalClusterTest struct {

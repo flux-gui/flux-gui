@@ -10,8 +10,8 @@ import (
 	"github.com/go-logr/logr"
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
-	"github.com/weaveworks/weave-gitops/pkg/testutils"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/pkg/testutils"
 )
 
 func TestPassthroughPrincipalGetter(t *testing.T) {

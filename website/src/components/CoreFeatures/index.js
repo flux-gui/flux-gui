@@ -22,7 +22,7 @@ const CoreFeatureList = [
     icon: faKey,
     description: (
       <>
-        Weave GitOps easily integrates into enterprise SSO to provide fine grained
+        Flux-GUI easily integrates into enterprise SSO to provide fine grained
         roles based access control (RBAC) to clusters and their assets.
       </>
     ),

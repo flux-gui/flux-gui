@@ -26,7 +26,7 @@ Please refer to the [Kubernetes documentation](https://kubernetes.io/docs/concep
 for more information about a complete `Ingress` configuration. It often depends on the Kubernetes provider you are
 using and your particular setup.
 
-The Weave GitOps Helm chart can generate an `Ingress` resource to integrate with the ingress controller you have configured for your cluster.
+The Flux-GUI Helm chart can generate an `Ingress` resource to integrate with the ingress controller you have configured for your cluster.
 To enable ingress generation set the `ingress.enabled` field to `true`.
 
 - If you are running the UI on a subpath, you need to set the `path` field to the same subpath specified in the `--route-prefix` flag.

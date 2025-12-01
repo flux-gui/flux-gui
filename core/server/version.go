@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/weaveworks/weave-gitops/core/clustersmngr/cluster"
-	pb "github.com/weaveworks/weave-gitops/pkg/api/core"
-	"github.com/weaveworks/weave-gitops/pkg/server/auth"
+	"github.com/flux-gui/flux-gui/core/clustersmngr/cluster"
+	pb "github.com/flux-gui/flux-gui/pkg/api/core"
+	"github.com/flux-gui/flux-gui/pkg/server/auth"
 )
 
 // Variables that we'll set @ build time

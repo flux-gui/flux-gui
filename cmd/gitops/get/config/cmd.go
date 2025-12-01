@@ -6,17 +6,17 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/weaveworks/weave-gitops/cmd/gitops/config"
-	"github.com/weaveworks/weave-gitops/pkg/config"
-	"github.com/weaveworks/weave-gitops/pkg/logger"
+	cfg "github.com/flux-gui/flux-gui/cmd/gitops/config"
+	"github.com/flux-gui/flux-gui/pkg/config"
+	"github.com/flux-gui/flux-gui/pkg/logger"
 )
 
 func ConfigCommand(opts *cfg.Options) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "config",
-		Short: "Prints out the CLI configuration for Weave GitOps",
+		Short: "Prints out the CLI configuration for Flux-GUI",
 		Example: `
-# Prints out the CLI configuration for Weave GitOps
+# Prints out the CLI configuration for Flux-GUI
 gitops get config`,
 		SilenceUsage:      true,
 		SilenceErrors:     true,
@@ -39,7 +39,7 @@ func getConfigCommandRunE(opts *cfg.Options) func(*cobra.Command, []string) erro
 			return err
 		}
 
-		log.Successf("Your CLI configuration for Weave GitOps:")
+		log.Successf("Your CLI configuration for Flux-GUI:")
 
 		cfgStr := gitopsConfig.String()
 		fmt.Println(cfgStr)

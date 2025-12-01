@@ -1,11 +1,11 @@
 # Release v0.29 published helm chart before container image was available causing upgrade failures in users  
 
-Tracking issue: https://github.com/weaveworks/weave-gitops/issues/3907
+Tracking issue: https://github.com/flux-gui/flux-gui/issues/3907
 
 ## Summary  
 
 Wednesday, August 2nd, we released Weave Gitops v0.29 as part of our regular release cadence. The release published 
-artefacts out of order causing degradation in users environments. For example, as stated in the [issue](https://github.com/weaveworks/weave-gitops/issues/3907), 
+artefacts out of order causing degradation in users environments. For example, as stated in the [issue](https://github.com/flux-gui/flux-gui/issues/3907), 
 the Helm chart was published before the container image was available:
 
 ```
@@ -18,15 +18,15 @@ and the container image was published.
 
 ## Root Cause Analysis 
 
-Releasing is stated in [release process](https://github.com/weaveworks/weave-gitops/blob/main/doc/release-process.md) that
+Releasing is stated in [release process](https://github.com/flux-gui/flux-gui/blob/main/doc/release-process.md) that
 requires two steps and workflows:
-- [prepare-release](https://github.com/weaveworks/weave-gitops/blob/main/.github/workflows/prepare-release.yaml)
-- [release](https://github.com/weaveworks/weave-gitops/blob/main/.github/workflows/release.yaml)
+- [prepare-release](https://github.com/flux-gui/flux-gui/blob/main/.github/workflows/prepare-release.yaml)
+- [release](https://github.com/flux-gui/flux-gui/blob/main/.github/workflows/release.yaml)
 
 Looking at process and workflows, at least these two paths could cause the failures shown in the Background:
 
 1. Release PR merged before Release job finishes
-2. Release job steps [ordering](https://github.com/weaveworks/weave-gitops/blob/main/.github/workflows/release.yaml#L104-L107)
+2. Release job steps [ordering](https://github.com/flux-gui/flux-gui/blob/main/.github/workflows/release.yaml#L104-L107)
 
 ### Release PR merged before Release job finishes
 
@@ -37,10 +37,10 @@ Release PR has two expected interactions:
 What the release process does not avoid, is Releaser accidentally merging the PR after approving and before the
 release job has finished. 
 
-This is the scenario that we found ourselves in the latest release [v0.29](https://github.com/weaveworks/weave-gitops/pull/3906). 
-The merge triggered the [chart workflow](https://github.com/weaveworks/weave-gitops/blob/main/.github/workflows/chart.yaml) 
-that [released v4.0.27 chart](https://github.com/weaveworks/weave-gitops/actions/runs/5738131386/job/15551116775). This chart
-expected [container image tag v0.29.0](https://github.com/weaveworks/weave-gitops/pull/3906/files#diff-67081178cf02ff87b1326e8b608a6ab4e49a85606346d64607b498fead04b048R13). 
+This is the scenario that we found ourselves in the latest release [v0.29](https://github.com/flux-gui/flux-gui/pull/3906). 
+The merge triggered the [chart workflow](https://github.com/flux-gui/flux-gui/blob/main/.github/workflows/chart.yaml) 
+that [released v4.0.27 chart](https://github.com/flux-gui/flux-gui/actions/runs/5738131386/job/15551116775). This chart
+expected [container image tag v0.29.0](https://github.com/flux-gui/flux-gui/pull/3906/files#diff-67081178cf02ff87b1326e8b608a6ab4e49a85606346d64607b498fead04b048R13). 
 
 This happened at around `2023-08-02T11:16` (UTC is the timezone used here).
 
@@ -69,7 +69,7 @@ First time we were notified of impact was at 11.26 UTC:
 
 ![first-time-noticed.png](imgs/first-time-noticed.png)
 
-The container image tag v0.29.0 [started building](https://github.com/weaveworks/weave-gitops/actions/runs/5738127454) at `2023-08-02T11:29`: 
+The container image tag v0.29.0 [started building](https://github.com/flux-gui/flux-gui/actions/runs/5738127454) at `2023-08-02T11:29`: 
 
 ```
 2023-08-02T11:29:24.0894265Z ##[group]Run docker/build-push-action@v3

@@ -11,9 +11,9 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/weaveworks/weave-gitops/pkg/services/auth"
-	"github.com/weaveworks/weave-gitops/pkg/services/auth/internal"
-	"github.com/weaveworks/weave-gitops/pkg/vendorfakes/fakehttp"
+	"github.com/flux-gui/flux-gui/pkg/services/auth"
+	"github.com/flux-gui/flux-gui/pkg/services/auth/internal"
+	"github.com/flux-gui/flux-gui/pkg/vendorfakes/fakehttp"
 )
 
 var _ = Describe("GitlabAuthClient", func() {

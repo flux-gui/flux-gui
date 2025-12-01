@@ -1,4 +1,4 @@
-module github.com/weaveworks/weave-gitops
+module github.com/flux-gui/flux-gui
 
 go 1.25.0
 
