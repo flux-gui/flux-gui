@@ -17,6 +17,9 @@
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/flux-gui/flux-gui/badge)](https://scorecard.dev/viewer/?uri=github.com/flux-gui/flux-gui)
 [![Go Report Card](https://goreportcard.com/badge/github.com/flux-gui/flux-gui)](https://goreportcard.com/report/github.com/flux-gui/flux-gui)
 
+> The rest of this README is referencing the old scope of the project.
+> This will be updated with more appropriate descriptions soon.
+
 Flux-GUI is a simple, open source developer platform for people who want cloud native applications but who don't have
 Kubernetes expertise. Experience how easy it is to enable GitOps and run your apps in a cluster. Use Git to collaborate
 with team members making new deployments easy and secure. Start with what developers need to run apps, and then easily
